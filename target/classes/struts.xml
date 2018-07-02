@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <!--&lt;!&ndash;开发模式&ndash;&gt;-->
+    <!--<constant name="struts.devMode" value="true"/>-->
+    <!--<constant name="struts.serve.static.browserCache" value="false"/>-->
+    <!--<constant name="struts.i18n.reload" value="true"/>-->
+
+    <!-- 默认访问页面 -->
+    <package name="default" extends="struts-default" namespace="/">
+        <default-action-ref name="default"/>
+        <action name="default">
+            <result>/view/account/user-login.jsp</result>
+        </action>
+    </package>
+
+    <!-- 相关请求转发 -->
+    <!-- Struts2在2.5版本后添加strict-method-invocation(严格方法访问)，默认为true，不能使用动态方法调用功能，故需设为false -->
+    <package name="account" extends="json-default,struts-default" namespace="/" strict-method-invocation="false">
+        <!-- 保存商品 -->
+        <action name="product_*" class="productAction" method="{1}Product">
+            <result>/view/Product.jsp</result>
+            <result name="input">/view/Product.jsp</result>
+        </action>
+        <action name="ulogin" class="accountAction" method="login">
+            <result name="success">/view/user/order-list.jsp</result>
+            <result name="fail">/view/account/user-login.jsp</result>
+        </action>
+        <action name="alogin" class="accountAction" method="login">
+            <result name="success">/view/admin/order-list.jsp</result>
+            <result name="fail">/view/account/admin-login.jsp</result>
+        </action>
+        <action name="hlogin" class="hotelAction" method="login">
+            <result name="success">/view/hotel/order-list.jsp</result>
+            <result name="fail">/view/account/hotel-login.jsp</result>
+        </action>
+
+        <action name="hregister" class="hotelAction" method="register">
+            <result name="success">/view/hotel/order-list.jsp</result>
+            <result name="fail">/view/account/hotel-login.jsp</result>
+        </action>
+        <action name="uregister" class="accountAction" method="register">
+            <result name="success">/view/user/order-list.jsp</result>
+            <result name="fail">/view/account/user-login.jsp</result>
+        </action>
+
+        <action name="ulogout" class="accountAction" method="logout">
+            <result name="success">/view/account/user-login.jsp</result>
+        </action>
+        <action name="alogout" class="accountAction" method="logout">
+            <result name="success">/view/account/admin-login.jsp</result>
+        </action>
+        <action name="hlogout" class="hotelAction" method="logout">
+            <result name="success">/view/account/hotel-login.jsp</result>
+        </action>
+        <action name="admin-login">
+            <result>/view/account/admin-login.jsp</result>
+        </action>
+        <action name="user-login">
+            <result>/view/account/user-login.jsp</result>
+        </action>
+        <action name="hotel-login">
+            <result>/view/account/hotel-login.jsp</result>
+        </action>
+        <action name="user-register">
+            <result>/view/account/user-register.jsp</result>
+        </action>
+        <action name="hotel-register">
+            <result>/view/account/hotel-register.jsp</result>
+        </action>
+
+    </package>
+
+    <package name="admin" extends="json-default,struts-default" namespace="/" strict-method-invocation="false">
+
+        <action name="admin-hotel">
+            <result>/view/admin/admin-hotel.jsp</result>
+        </action>
+        <action name="admin-order">
+            <result>/view/admin/admin-order.jsp</result>
+        </action>
+        <action name="admin-turnover">
+            <result>/view/admin/admin-turnover.jsp</result>
+        </action>
+        <action name="admin-user">
+            <result>/view/admin/admin-user.jsp</result>
+        </action>
+        <action name="admin-order-list">
+            <result>/view/admin/order-list.jsp</result>
+        </action>
+
+        <action name="getAdminUserTips" class="accountAction" method="getAdminUserTips">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getRegisterGraph" class="accountAction" method="getAdminUserRegisterGraph">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getActiveGraph" class="accountAction" method="getAdminUserActiveGraph">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+
+    </package>
+
+    <package name="user" extends="json-default, struts-default" namespace="/" strict-method-invocation="false">
+
+        <action name="user-order">
+            <result>/view/user/user-order.jsp</result>
+        </action>
+        <action name="user-turnover">
+            <result>/view/user/user-turnover.jsp</result>
+        </action>
+        <action name="user-order-list">
+            <result>/view/user/order-list.jsp</result>
+        </action>
+        <!--<action name="user-base">-->
+            <!--<result>/view/user/user-base.jsp</result>-->
+        <!--</action>-->
+
+    </package>
+
+    <package name="hotel" extends="json-default, struts-default" namespace="/" strict-method-invocation="false">
+
+        <action name="hotel-order">
+            <result>/view/hotel/hotel-order.jsp</result>
+        </action>
+        <action name="hotel-turnover">
+            <result>/view/hotel/hotel-turnover.jsp</result>
+        </action>
+        <action name="hotel-comment">
+            <result>/view/hotel/hotel-comment.jsp</result>
+        </action>
+        <!--<action name="hotel-base">-->
+            <!--<result>/view/hotel/hotel-base.jsp</result>-->
+        <!--</action>-->
+        <action name="hotel-room">
+            <result>/view/hotel/hotel-room.jsp</result>
+        </action>
+        <action name="hotel-order-list">
+            <result>/view/hotel/order-list.jsp</result>
+        </action>
+
+    </package>
+
+    <!-- 引入资源文件 -->
+    <!--<constant name="struts.custom.i18n.resources" value="messageResource"></constant>-->
+
+</struts>
