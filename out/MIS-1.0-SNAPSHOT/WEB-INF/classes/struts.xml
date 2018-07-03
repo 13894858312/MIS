@@ -215,16 +215,91 @@
         <action name="hotel-comment">
             <result>/view/hotel/hotel-comment.jsp</result>
         </action>
-        <!--<action name="hotel-base">-->
-            <!--<result>/view/hotel/hotel-base.jsp</result>-->
-        <!--</action>-->
         <action name="hotel-room">
             <result>/view/hotel/hotel-room.jsp</result>
         </action>
         <action name="hotel-order-list">
             <result>/view/hotel/order-list.jsp</result>
         </action>
+        <!--<action name="hotel-base">-->
+        <!--<result>/view/hotel/hotel-base.jsp</result>-->
+        <!--</action>-->
 
+        <action name="getHotelYearlyOrderNum" class="hotelAction" method="getHotelYearlyOrderNum">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getHotelMonthlyOrderNum" class="hotelAction" method="getHotelMonthlyOrderNum">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getHotelDailyOrderNum" class="hotelAction" method="getHotelDailyOrderNum">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getHotelYearlyTurnover" class="hotelAction" method="getHotelYearlyTurnover">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getHotelMonthlyTurnover" class="hotelAction" method="getHotelMonthlyTurnover">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getHotelDailyTurnover" class="hotelAction" method="getHotelDailyTurnover">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getHotelComment" class="hotelAction" method="getHotelComment">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getHotelCommentChange" class="hotelAction" method="getHotelCommentChange">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getSameTermTurnover" class="hotelAction" method="getSameTermTurnover">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getHotelTurnoverChange" class="hotelAction" method="getHotelTurnoverChange">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getRoom" class="roomAction" method="getRoom">
+            <result name = "success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getRoomOrder" class="roomAction" method="getRoomOrder">
+            <result name = "success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getRoomTurnover" class="roomAction" method="getRoomTurnover">
+            <result name = "success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getReservedRoom" class="roomAction" method="getReservedRoom">
+            <result name = "success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getToMonthComment" class="hotelAction" method="getToMonthComment">
+            <result name = "success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
     </package>
 
     <!-- 引入资源文件 -->

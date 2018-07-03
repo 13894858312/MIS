@@ -166,9 +166,6 @@
             dataType: 'json',
             success: function (data) {
                 content = JSON.parse(data);
-                alert(content[0]);
-                alert(content['l']);
-                alert(content)
             }
         });
         var option = {

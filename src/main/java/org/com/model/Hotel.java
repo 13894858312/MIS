@@ -14,7 +14,7 @@ public class Hotel {
     private int hid;
     @Column(length = 30)
     private String pwd;
-    private java.sql.Date createDate;
+    private java.sql.Date create_date;
     @Column(length = 30)
     private String hname;
     @Column(length = 10)
@@ -39,13 +39,13 @@ public class Hotel {
         this.hid = hid;
         this.pwd = pwd;
         this.hname = hname;
-        this.createDate = date;
+        this.create_date = date;
     }
 
     public Hotel(int hid, String pwd, Date createDate, String hname, String city){
         this.hid = hid;
         this.pwd = pwd;
-        this.createDate = createDate;
+        this.create_date = createDate;
         this.hname = hname;
         this.city = city;
     }
@@ -67,11 +67,11 @@ public class Hotel {
     }
 
     public Date getCreateDate() {
-        return createDate;
+        return create_date;
     }
 
     public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
+        this.create_date = createDate;
     }
 
     public String getHname() {

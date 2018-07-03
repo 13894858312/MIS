@@ -74,7 +74,7 @@
         });
         var option = {
             title : {
-                text: '本月客户评分数量',
+                text: '客户评分统计',
                 x:'center'
             },
             tooltip : {
