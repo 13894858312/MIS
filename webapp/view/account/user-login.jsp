@@ -11,18 +11,14 @@
     <meta charset="utf-8">
     <title>用户登录</title>
     <link rel="stylesheet" href="../../css/index.css">
-    <style type="text/css">
-        @import "../../css/index.css";
-    </style>
-    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-<div class="main-page">
+<div>
     <div class="login-box">
         <Form action="ulogin.action" method="post" class="login-form">
-            账号：<input type="text" id="user-uid" name="uid" maxlength="30" placeholder="帐号" />
+            <input class="textfield" type="text" id="user-uid" name="uid" maxlength="30" placeholder="帐号" />
             <br/>
-            密码：<input type="password" id="user-pwd" name="pwd" maxlength="30" placeholder="密码">
+            <input class="textfield" type="password" id="user-pwd" name="pwd" maxlength="30" placeholder="密码">
             <br/>
             <input type="hidden" id="user-type" name="type" value=0>
             <input type="submit" id="user-submit" class="submit" value="登陆"/>

@@ -20,16 +20,16 @@
     <!-- Struts2在2.5版本后添加strict-method-invocation(严格方法访问)，默认为true，不能使用动态方法调用功能，故需设为false -->
     <package name="account" extends="json-default,struts-default" namespace="/" strict-method-invocation="false">
         <!-- 保存商品 -->
-        <action name="product_*" class="productAction" method="{1}Product">
-            <result>/view/Product.jsp</result>
-            <result name="input">/view/Product.jsp</result>
-        </action>
+        <!--<action name="product_*" class="productAction" method="{1}Product">-->
+            <!--<result>/view/Product.jsp</result>-->
+            <!--<result name="input">/view/Product.jsp</result>-->
+        <!--</action>-->
         <action name="ulogin" class="accountAction" method="login">
             <result name="success">/view/user/order-list.jsp</result>
             <result name="fail">/view/account/user-login.jsp</result>
         </action>
         <action name="alogin" class="accountAction" method="login">
-            <result name="success">/view/admin/order-list.jsp</result>
+            <result name="success">/view/admin/admin-order.jsp</result>
             <result name="fail">/view/account/admin-login.jsp</result>
         </action>
         <action name="hlogin" class="hotelAction" method="login">
@@ -106,7 +106,61 @@
                 <param name="root">result</param>
             </result>
         </action>
-
+        <action name="getAdminTurnoverPercent" class="hotelAction" method="getTurnoverPercent">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getAdminTopTurnover" class="hotelAction" method="getTopTurnoverHotel">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getAdminTopOrder" class="hotelAction" method="getTopOrderHotel">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getAdminOrderYearly" class="orderAction" method="getAdminOrderYearly">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getAdminOrderMonthly" class="orderAction" method="getAdminOrderMonthly">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getAdminOrderDaily" class="orderAction" method="getAdminOrderDaily">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getAdminTurnoverYearly" class="orderAction" method="getAdminOrderYearly">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getAdminTurnoverMonthly" class="orderAction" method="getAdminOrderMonthly">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getAdminTurnoverDaily" class="orderAction" method="getAdminOrderDaily">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getAdminAreaOrder" class="orderAction" method="getAdminAreaOrder">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getAdminAreaTurnover" class="orderAction" method="getAdminAreaOrder">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
     </package>
 
     <package name="user" extends="json-default, struts-default" namespace="/" strict-method-invocation="false">

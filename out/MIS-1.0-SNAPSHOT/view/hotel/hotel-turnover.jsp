@@ -9,9 +9,13 @@
 <html>
 <head>
     <title>销售额统计</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/index.css">
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../js/echarts.js"></script>
 </head>
 <body>
-<header>
+<header class="header">
     <div class="head-item">
         <a href="hotel-order-list.action">订单列表</a>
     </div>

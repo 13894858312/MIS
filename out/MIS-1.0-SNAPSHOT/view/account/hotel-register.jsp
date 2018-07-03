@@ -11,18 +11,17 @@
     <meta charset="utf-8">
     <title>酒店注册</title>
     <link rel="stylesheet" href="../../css/index.css">
-    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-<div class="main-page">
+<div>
     <div class="login-box">
 
         <Form action="hregister.action" method="post" class="login-form">
-            账号：<input type="text" id="hotel-hid" name="hid" maxlength="30" placeholder="酒店帐号" />
+            <input class="textfield" type="text" id="hotel-hid" name="hid" maxlength="30" placeholder="酒店帐号" />
             <br/>
-            密码：<input type="password" id="hotel-pwd" name="pwd" maxlength="30" placeholder="酒店密码">
+            <input class="textfield" type="password" id="hotel-pwd" name="pwd" maxlength="30" placeholder="酒店密码">
             <br/>
-            名称：<input type="text" id="hotel-hname" name="hname" maxlength="30" placeholder="酒店名称">
+            <input class="textfield" type="text" id="hotel-hname" name="hname" maxlength="30" placeholder="酒店名称">
             <br/>
             <input type="submit" id="hotel_submit" class="submit" value="注册"/>
         </Form>

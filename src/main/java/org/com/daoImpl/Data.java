@@ -48,7 +48,7 @@ public class Data {
         HashMap<String,Long> result = new HashMap<>();
         List<Object[]> queryResult;
         String type_str = getTypeString(type);
-        sql = sql+type_str+"group by year, month, day";
+        sql = sql+type_str+" group by year(o.ctime), month(o.ctime), day(o.ctime)";
         if(type == TYPE.WEB){
             queryResult=(List<Object[]>)template.find(sql, year, month);
 //            queryResult = session.createQuery(sql).setInteger(0,year).setInteger(1,month).list();
@@ -75,9 +75,9 @@ public class Data {
         HashMap<String,Long> result = new HashMap<>();
         List<Object[]> queryResult;
         String typeStr = getTypeString(type);
-        sql = sql+typeStr+"group by year, month";
+        sql = sql+typeStr+" group by year(o.ctime), month(o.ctime)";
         if(type == TYPE.WEB){
-            queryResult =(List<Object[]>)template.find(sql,year);
+            queryResult =(List<Object[]>)template.find(sql, year);
 //            queryResult = session.createQuery(sql).setInteger(0,year).list();
         }else {
             queryResult =(List<Object[]>)template.find(sql,year, id);
@@ -101,7 +101,7 @@ public class Data {
         HashMap<String,Long> result = new HashMap<>();
         List<Object[]> queryResult;
         String typeStr = getTypeString(type);
-        sql = sql+typeStr+"group by year";
+        sql = sql+typeStr+" group by year(o.ctime)";
         if(type == TYPE.WEB){
             queryResult = (List<Object[]>)template.find(sql);
 //            queryResult = session.createQuery(sql).list();
@@ -110,7 +110,7 @@ public class Data {
 //            queryResult = session.createQuery(sql).setInteger(0,id).list();
         }
         for(Object[] object : queryResult){
-            String date = (String)object[0];
+            String date = object[0].toString();
             result.put(date, (Long)object[1]);
         }
         return result;
@@ -130,7 +130,7 @@ public class Data {
         HashMap<String,Long> result = new HashMap<>();
         List<Object[]> queryResult;
         String typestr = getTypeString(type);
-        sql = sql+typestr+"group by year, month, day";
+        sql = sql+typestr+" group by year(o.ctime), month(o.ctime), day(o.ctime)";
         if(type == TYPE.WEB){
             queryResult = (List<Object[]>)template.find(sql,year,month);
 //            queryResult = session.createQuery(sql).setInteger(0,year).setInteger(1,month).list();
@@ -158,7 +158,7 @@ public class Data {
         HashMap<String,Long> result = new HashMap<>();
         List<Object[]> queryResult;
         String typeStr = getTypeString(type);
-        sql = sql+typeStr+"group by year, month";
+        sql = sql+typeStr+" group by year(o.ctime), month(o.ctime)";
         if(type == TYPE.WEB){
             queryResult = (List<Object[]>)template.find(sql,year);
 //            queryResult = session.createQuery(sql).setInteger(0,year).list();
@@ -185,7 +185,7 @@ public class Data {
         HashMap<String,Long> result = new HashMap<>();
         List<Object[]> queryResult;
         String typeStr = getTypeString(type);
-        sql = sql+typeStr+"group by year";
+        sql = sql+typeStr+" group by year(o.ctime)";
         if(type == TYPE.WEB){
             queryResult = (List<Object[]>)template.find(sql);
 //            queryResult = session.createQuery(sql).list();

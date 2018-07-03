@@ -9,12 +9,16 @@
 <html>
 <head>
     <title>评价统计</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/index.css">
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../js/echarts.js"></script>
 </head>
 <body>
-<header>
-    <div class="head-item">
-        <a href="hotel-order-list.action">订单列表</a>
-    </div>
+<header class="header">
+    <%--<div class="head-item">--%>
+        <%--<a href="hotel-order-list.action">订单列表</a>--%>
+    <%--</div>--%>
     <div class="head-item">
         <a href="hotel-order.action">订单统计</a>
     </div>

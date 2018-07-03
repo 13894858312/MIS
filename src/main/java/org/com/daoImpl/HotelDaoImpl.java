@@ -9,7 +9,9 @@ import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -139,11 +141,47 @@ public class HotelDaoImpl implements HotelDao {
     @Override
     public HashMap<String, Double> getComment(int hid) {
         HashMap<String, Double> result = new HashMap<>();
-        String sql = "select year(o.etime) as year, month(o.etime) as month, avg(o.pingjia) from Orders o where o.hid=? and o.state=3 group by year, month";
+        String sql = "select year(o.etime) as year, month(o.etime) as month, avg(o.pingjia) from Orders o where o.hid=? and o.state=3 group by year(o.etime), month(o.etime)";
         List<Object[]> queryResult = (List<Object[]>) template.find(sql, hid);
         for(Object[] o:queryResult){
             String m = o[0]+"-"+o[1];
             result.put(m, (Double)o[2]);
+        }
+        return result;
+    }
+
+    @Override
+    public HashMap<String, Long> getTopOrderHotel(int num) {
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH) + 1;
+        HashMap<String, Long> result = new HashMap<>();
+        String sql = "select h.hname , count(o.oid) from Orders o join Hotel h on o.hid = h.hid where year(o.ctime)=? and month(o.ctime) =?" +
+                " group by h.hname order by count(o.oid) desc";
+        Iterator<Object[]> queryResult = (Iterator<Object[]>) template.find(sql, year, month).iterator();
+        int i = 0 ;
+        while(queryResult.hasNext() && i<num){
+            Object[] objects = queryResult.next();
+            result.put((String)objects[0], (Long)objects[1]);
+            i++;
+        }
+        return result;
+    }
+
+    @Override
+    public HashMap<String, Long> getTopTurnoverHotel( int num) {
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH) + 1;
+        HashMap<String, Long> result = new HashMap<>();
+        String sql = "select h.hname , sum(o.money) from Orders o join Hotel h on o.hid = h.hid where year(o.ctime)=? and month(o.ctime) =?" +
+                " group by h.hname order by sum(o.money) desc";
+        Iterator<Object[]> queryResult = (Iterator<Object[]>) template.find(sql, year, month).iterator();
+        int i = 0 ;
+        while(queryResult.hasNext() && i<num){
+            Object[] objects = queryResult.next();
+            result.put((String)objects[0], (Long) objects[1]);
+            i++;
         }
         return result;
     }

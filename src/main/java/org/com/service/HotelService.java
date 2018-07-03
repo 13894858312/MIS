@@ -44,4 +44,9 @@ public interface HotelService {
     public long[] getTypeOrderNum(int hid);
 
     public HashMap<String, Double> getMonthlyComment(int hid);
+
+    public HashMap<String, Long> getTopOrderHotel(int num);
+
+    public HashMap<String, Long> getTopTurnoverHotel(int num);
+
 }

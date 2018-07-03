@@ -150,4 +150,16 @@ public interface HotelDao {
      */
     public HashMap<String, Double> getComment(int hid);
 
+    /**
+     * 获取订单数最高的十个酒店
+     * @return
+     */
+    public HashMap<String, Long> getTopOrderHotel(int num);
+
+    /**
+     * 获取销售额最高的十个酒店
+     * @return
+     */
+    public HashMap<String, Long> getTopTurnoverHotel(int num);
+
 }

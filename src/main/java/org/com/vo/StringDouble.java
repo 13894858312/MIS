@@ -3,13 +3,13 @@ package org.com.vo;
 /**
  * Created by wangxue on 2018/7/2.
  */
-public class StringLong implements Comparable<StringLong> {
+public class StringDouble implements Comparable<StringDouble>{
     String s;
-    Long l;
+    Double d;
 
-    public StringLong(String s, Long l){
+    public StringDouble(String s, Double d){
         this.s = s;
-        this.l = l;
+        this.d = d;
     }
 
     public String getS() {
@@ -20,16 +20,16 @@ public class StringLong implements Comparable<StringLong> {
         this.s = s;
     }
 
-    public Long getL() {
-        return l;
+    public Double getD() {
+        return d;
     }
 
-    public void setL(Long l) {
-        this.l = l;
+    public void setD(Double d) {
+        this.d = d;
     }
 
     @Override
-    public int compareTo(StringLong s2) {
+    public int compareTo(StringDouble s2) {
         return this.s.compareTo(s2.s);
     }
 }

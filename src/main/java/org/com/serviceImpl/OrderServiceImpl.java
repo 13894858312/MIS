@@ -70,7 +70,7 @@ public class OrderServiceImpl implements OrderService{
     }
 
     @Override
-    public HashMap<String, Long> getHotelPeriodTurnOver(int year, int month) {
+    public HashMap<String, Long> getPeriodTurnOver(int year, int month) {
         return orderDao.getHotelPeriodTurnOver(year, month);
     }
 
@@ -85,12 +85,12 @@ public class OrderServiceImpl implements OrderService{
     }
 
     @Override
-    public HashMap<String, Long> getPeriodOrder(int year) {
+    public HashMap<String, Long> getPeriodOrderNum(int year) {
         return orderDao.getPeriodOrder(year);
     }
 
     @Override
-    public HashMap<String, Long> getPeriodOrder(int year, int month) {
+    public HashMap<String, Long> getPeriodOrderNum(int year, int month) {
         return orderDao.getPeriodOrder(year, month);
     }
 

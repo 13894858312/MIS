@@ -4,6 +4,7 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import net.sf.json.JSONArray;
 import org.apache.struts2.ServletActionContext;
+import org.com.tools.Help;
 import org.com.model.Account;
 import org.com.model.Orders;
 import org.com.service.AccountService;
@@ -91,14 +92,16 @@ public class AccountAction extends ActionSupport {
     }
 
     public String getAdminUserRegisterGraph(){
-        ArrayList<StringLong> list = Help.toArray(accountService.getMonthlyUserNum());
+        ArrayList<StringLong> list = Help.sl2Array(accountService.getMonthlyUserNum());
+        Collections.sort(list);
         JSONArray jsonArray = JSONArray.fromObject(list);
         result = jsonArray.toString();
         return SUCCESS;
     }
 
     public String getAdminUserActiveGraph(){
-        ArrayList<StringLong> list = Help.toArray(accountService.getMonthlyActiveNum());
+        ArrayList<StringLong> list = Help.sl2Array(accountService.getMonthlyActiveNum());
+        Collections.sort(list);
         JSONArray jsonArray = JSONArray.fromObject(list);
         result = jsonArray.toString();
         return SUCCESS;

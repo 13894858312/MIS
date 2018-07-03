@@ -6,10 +6,10 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../css/index.css">
     <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
-    <%--<script type="text/javascript" src="../../js/admin.js"></script>--%>
+    <script type="text/javascript" src="../../js/echarts.js"></script>
 </head>
 <body onload="init()">
-<header>
+<header class="header">
     <div class="head-item">
         <a href="admin-order-list.action">订单列表</a>
     </div>
@@ -42,9 +42,7 @@
             <div id="active" class="tip">
                 本月活跃用户数：
             </div>
-            <div class="tip">客户注册数统计</div>
             <div id="register-content" class="graph-back"></div>
-            <div class="tip">活跃用户数统计</div>
             <div id="active-content" class="graph-back"></div>
         </div>
     </div>
@@ -68,9 +66,11 @@
         });
     }
     function setRegisterContent() {
-        var register = document.getElementById("register-content");
+        var register = echarts.init( document.getElementById("register-content"));
         var content;
         var x=[];
+        var y=[];
+
         $.ajax({
             cache: false,
             async: false,
@@ -79,9 +79,14 @@
             dataType: 'json',
             success: function (data) {
                 content = JSON.parse(data);
+                for(var i=0;i<content.length;i++){
+                    x.push(content[i]['s']);
+                    y.push(content[i]['l']);
+                }
 
             }
         });
+
         //指定图表的配置项和数据
         var option = {
             title:{
@@ -96,11 +101,21 @@
             legend:{
                 data:['月注册客户数']
             },
+            toolbox: {
+                show : true,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
             //横轴
             xAxis:{
                 show:false,
                 type: 'category',
-                data: content['s']
+                data: x
             },
             //纵轴
             yAxis:{},
@@ -109,13 +124,67 @@
                 name:'注册数',
                 //折线图
                 type:'line',
-                data:content['l']
+                data:y
             }]
         };
         register.setOption(option);
     }
     function setActiveContent() {
-        var active = document.getElementById("active-content");
+        var active = echarts.init(document.getElementById("active-content"));
+        var content;
+        var x=[];
+        var y=[];
+
+        $.ajax({
+            cache: false,
+            async: false,
+            url: 'getActiveGraph.action',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                content = JSON.parse(data);
+                for(var i=0;i<content.length;i++){
+                    x.push(content[i]['s']);
+                    y.push(content[i]['l']);
+                }
+
+            }
+        });
+
+        var option = {
+            title:{
+                text:'每月活跃客户数量变化统计图'
+            },
+            tooltip:{
+                trigger:'axis'
+            },
+            legend:{
+                data:['月活跃客户数']
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            xAxis:{
+                show:false,
+                type: 'category',
+                data: x
+            },
+            yAxis:{},
+            series:[{
+                name:'活跃用户数',
+                //折线图
+                type:'line',
+                data:y
+            }]
+        };
+        active.setOption(option);
     }
     function init() {
         setTips();

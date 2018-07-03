@@ -31,15 +31,15 @@ public interface OrderService {
 
     public HashMap<String, Long> getPeriodTurnOver(int year);
 
-    public HashMap<String, Long> getHotelPeriodTurnOver(int year, int month);
+    public HashMap<String, Long> getPeriodTurnOver(int year, int month);
 
     public long getTotalOrderNum();
 
     public HashMap<String,Long> getPeriodOrderNum();
 
-    public HashMap<String, Long> getPeriodOrder(int year);
+    public HashMap<String, Long> getPeriodOrderNum(int year);
 
-    public HashMap<String, Long> getPeriodOrder(int year, int month);
+    public HashMap<String, Long> getPeriodOrderNum(int year, int month);
 
     public long getCertainTurnover(int year, int month, int day);
 

@@ -32,13 +32,13 @@ public class OrderDaoImpl implements OrderDao {
 
     @Override
     public boolean addOrder(Orders orders) {
-//        try {
+        try {
             template.save(orders);
             return true;
-//        }catch (Exception e){
-//            System.out.println("订单 "+orders.getOid()+" 插入错误");
-//        }
-//        return false;
+        }catch (Exception e){
+            System.out.println("订单 "+orders.getOid()+" 插入错误");
+        }
+        return false;
     }
 
     @Override

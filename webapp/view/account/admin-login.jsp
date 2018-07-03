@@ -11,16 +11,15 @@
     <meta charset="utf-8">
     <title>管理员登陆</title>
     <link rel="stylesheet" href="../../css/index.css">
-    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-<div class="main-page">
+<div>
     <div class="login-box">
 
         <Form action="alogin.action" method="post" class="login-form">
-            账号：<input type="text" id="admin-uid" name="uid" maxlength="30" placeholder="管理员帐号" />
+            <input class="textfield" type="text" id="admin-uid" name="uid" maxlength="30" placeholder="管理员帐号" />
             <br/>
-            密码：<input type="password" id="admin-pwd" name="pwd" maxlength="30" placeholder="管理员密码">
+            <input class="textfield" type="password" id="admin-pwd" name="pwd" maxlength="30" placeholder="管理员密码">
             <br/>
             <input type="hidden" id="admin-type" name="type" value=1>
             <input type="submit" id="admin-login_submit" class="submit" value="登陆"/>

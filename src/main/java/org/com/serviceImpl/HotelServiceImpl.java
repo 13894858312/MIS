@@ -113,4 +113,14 @@ public class HotelServiceImpl implements HotelService{
         return hotelDao.getComment(hid);
     }
 
+    @Override
+    public HashMap<String, Long> getTopOrderHotel(int num) {
+        return hotelDao.getTopOrderHotel(num);
+    }
+
+    @Override
+    public HashMap<String, Long> getTopTurnoverHotel(int num) {
+        return hotelDao.getTopTurnoverHotel(num);
+    }
+
 }

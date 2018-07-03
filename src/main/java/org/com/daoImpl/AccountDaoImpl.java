@@ -94,13 +94,14 @@ public class AccountDaoImpl implements AccountDao {
 
     @Override
     public HashMap<String, Long> getMonthlyActiveNum() {
-        String hql = "select year(o.ctime) as year, month(o.ctime) as month, count(distinct uid) as num from Orders o group by year(o,ctime), month(o.ctime)";
+        String hql = "select year(o.ctime) as year, month(o.ctime) as month, count(distinct uid) as num from Orders o group by year(o.ctime), month(o.ctime)";
         List<Object[]> query = (List<Object[]>) template.find(hql);
         HashMap<String, Long> result = new HashMap<>();
         for(Object[] r : query){
             String s = r[0]+"-"+r[1];
             result.put(s, (long)r[2]);
         }
+
         return result;
     }
 
