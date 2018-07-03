@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="../../css/index.css">
     <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../../js/echarts.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
 </head>
-<body>
+<body onload="init()">
 <header class="header">
     <%--<div class="head-item">--%>
         <%--<a href="hotel-order-list.action">订单列表</a>--%>
@@ -36,47 +37,227 @@
     </div>
 </header>
 
+
 <div class="main-page">
     <div class="order-content">
-
-        <div class="content">
-            <div class="tip">
-                订单状态
-            </div>
-            <div class="graph-back" id="percent"></div>
+        <div id="content">
+            <div id="yearly" class="graph-back"></div>
+            <div id="monthly" class="graph-back"></div>
+            <div id="daily" class="graph-back"></div>
         </div>
-
-        <div class="content">
-            <div class="tip">
-                订单数统计
-            </div>
-            <div id="con">
-                <ul id="tags">
-                    <li class="selectTag">
-                        <a onClick="selectTag('tagContent0',this)" href="javascript:void(0)">分年显示</a>
-                    </li>
-                    <li class="selectTag">
-                        <a onClick="selectTag('tagContent1',this)" href="javascript:void(0)">分月显示</a>
-                    </li>
-                    <li class="selectTag">
-                        <a onClick="selectTag('tagContent2',this)" href="javascript:void(0)">分日显示</a>
-                    </li>
-                </ul>
-            </div>
-            <div id="tag-content">
-                <div class="tagContent selectTag" id="tagContent0">
-                    <div id="yearly" class="orderlist"></div>
-                </div>
-                <div class="tagContent" id="tagContent1">
-                    <div id="monthly" class="orderlist"></div>
-                </div>
-                <div class="tagContent" id="tagContent2">
-                    <div id="daily" class="orderlist"></div>
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>
 </body>
+
+<script type="text/javascript">
+    function getYearly() {
+        var content;
+        var temp =[];
+        var yearly = echarts.init(document.getElementById("yearly"));
+        $.ajax({
+            cache: false,
+            async: false,
+            url: 'getHotelYearlyOrder.action',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                content = JSON.parse(data);
+                for(var i=0;i<content.length;i++){
+                    temp.push([content[i]['s'], content[i]['l']]);
+                }
+            }
+        });
+        var option = {
+            title : {
+                text : '网站分年订单数统计折线图'
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter : function (params) {
+                    var date = new Date(params.value[0]);
+                    data = date.getFullYear();
+                    return data + '<br/>'
+                        + params.value[1] + ', '
+                        + params.value[2];
+                }
+            },
+            dataZoom: {
+                show: true,
+                start : 0
+            },
+            legend : {
+                data : ['订单数']
+            },
+            grid: {
+                y2: 80
+            },
+            xAxis : [
+                {
+                    type : 'time',
+                    splitNumber:10
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    name: '订单数',
+                    type: 'line',
+                    showAllSymbol: true,
+                    symbolSize: function (value){
+                        return Math.round(value[2]/10) + 2;
+                    },
+                    data:temp
+                }
+            ]
+        };
+        yearly.setOption(option);
+
+    }
+    function getMonthly() {
+        var content;
+        var temp=[];
+        var monthly = echarts.init(document.getElementById("monthly"));
+        $.ajax({
+            cache: false,
+            async: false,
+            url: 'getHotelMonthlyOrder.action',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                content = JSON.parse(data);
+                for(var i=0;i<content.length;i++){
+                    temp.push([content[i]['s'], content[i]['l']]);
+                }
+
+            }
+        });var option = {
+            title : {
+                text : '网站本年分月订单数统计折线图'
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter : function (params) {
+                    var date = new Date(params.value[0]);
+                    data = date.getFullYear() + '-'
+                        + (date.getMonth() + 1) ;
+                    return data + '<br/>'
+                        + params.value[1] + ', '
+                        + params.value[2];
+                }
+            },
+            dataZoom: {
+                show: true,
+                start : 0
+            },
+            legend : {
+                data : ['订单数']
+            },
+            grid: {
+                y2: 80
+            },
+            xAxis : [
+                {
+                    type : 'time',
+                    splitNumber:10
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    name: '订单数',
+                    type: 'line',
+                    showAllSymbol: true,
+                    symbolSize: function (value){
+                        return Math.round(value[2]/10) + 2;
+                    },
+                    data:temp
+                }
+            ]
+        };
+        monthly.setOption(option);
+    }
+    function getDaily() {
+        var content;
+        var temp=[];
+        var daily = echarts.init(document.getElementById("daily"));
+        $.ajax({
+            cache: false,
+            async: false,
+            url: 'getHotelDailyOrder.action',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                content = JSON.parse(data);
+                for(var i=0;i<content.length;i++){
+                    temp.push([content[i]['s'], content[i]['l']]);
+                }
+
+            }
+        });
+        var option = {
+            title : {
+                text : '网站本月分日订单数统计折线图'
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter : function (params) {
+                    var date = new Date(params.value[0]);
+                    data = date.getFullYear() + '-'
+                        + (date.getMonth() + 1) + '-'
+                        + date.getDate();
+                    return data + '<br/>'
+                        + params.value[1] + ', '
+                        + params.value[2];
+                }
+            },
+            dataZoom: {
+                show: true,
+                start : 0
+            },
+            legend : {
+                data : ['订单数']
+            },
+            grid: {
+                y2: 80
+            },
+            xAxis : [
+                {
+                    type : 'time',
+                    splitNumber:10
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    name: '订单数',
+                    type: 'line',
+                    showAllSymbol: true,
+                    symbolSize: function (value){
+                        return Math.round(value[2]/10) + 2;
+                    },
+                    data:temp
+                }
+            ]
+        };
+        daily.setOption(option);
+
+    }
+    function init() {
+        getYearly();
+        getMonthly();
+        getDaily();
+    }
+</script>
 </html>

@@ -40,9 +40,6 @@
 
 <div class="main-page">
     <div class="order-content">
-        <div class="tip">
-            订单数统计
-        </div>
         <div id="content">
                 <div id="yearly" class="graph-back"></div>
                 <div id="monthly" class="graph-back"></div>

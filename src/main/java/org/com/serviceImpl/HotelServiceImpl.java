@@ -123,4 +123,9 @@ public class HotelServiceImpl implements HotelService{
         return hotelDao.getTopTurnoverHotel(num);
     }
 
+    @Override
+    public double[] getToMonthComment(int hid) {
+        return hotelDao.getToMonthComment(hid);
+    }
+
 }

@@ -162,4 +162,11 @@ public interface HotelDao {
      */
     public HashMap<String, Long> getTopTurnoverHotel(int num);
 
+    /**
+     * 获取酒店本月评价数
+     * @param hid
+     * @return
+     */
+    public double[] getToMonthComment(int hid);
+
 }

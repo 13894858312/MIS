@@ -44,7 +44,7 @@ public class Data {
      * @return
      */
     protected HashMap<String, Long> periodOrderQueryHelper(int year, int month, TYPE type, int id){
-        String sql = "select year(o.ctime) as year, month(o.ctime) as month, day(o.ctime) as day, count(o.oid) from Orders o where o.state<>3 and year(o.ctime)=? and month(o.ctime)=? ";
+        String sql = "select year(o.ctime) as year, month(o.ctime) as month, day(o.ctime) as day, count(o.oid) from Orders o where o.state<>2 and year(o.ctime)=? and month(o.ctime)=? ";
         HashMap<String,Long> result = new HashMap<>();
         List<Object[]> queryResult;
         String type_str = getTypeString(type);
@@ -71,7 +71,7 @@ public class Data {
      * @return
      */
     protected HashMap<String, Long> periodOrderQueryHelper(int year, TYPE type, int id){
-        String sql = "select year(o.ctime) as year, month(o.ctime) as month, count(o.oid) from Orders o where o.state<>3 and year(o.ctime)=? ";
+        String sql = "select year(o.ctime) as year, month(o.ctime) as month, count(o.oid) from Orders o where o.state<>2 and year(o.ctime)=? ";
         HashMap<String,Long> result = new HashMap<>();
         List<Object[]> queryResult;
         String typeStr = getTypeString(type);
@@ -97,7 +97,7 @@ public class Data {
      * @return
      */
     protected HashMap<String, Long> periodOrderQueryHelper(TYPE type, int id){
-        String sql = "select year(o.ctime) as year, count(o.ctime) from Orders o where  o.state<>3 ";
+        String sql = "select year(o.ctime) as year, count(o.ctime) from Orders o where  o.state<>2 ";
         HashMap<String,Long> result = new HashMap<>();
         List<Object[]> queryResult;
         String typeStr = getTypeString(type);
@@ -126,7 +126,7 @@ public class Data {
      */
     protected HashMap<String, Long> periodTurnoverQueryHelper(int year, int month, TYPE type, int id){
 //        Session session = sessionFactory.openSession();
-        String sql = "select year(o.ctime) as year, month(o.ctime) as month, day(o.ctime) as day, sum(o.money) from Orders o where o.state<>3 and year(o.ctime)=? and month(o.ctime)=? ";
+        String sql = "select year(o.ctime) as year, month(o.ctime) as month, day(o.ctime) as day, sum(o.money) from Orders o where o.state<>2 and year(o.ctime)=? and month(o.ctime)=? ";
         HashMap<String,Long> result = new HashMap<>();
         List<Object[]> queryResult;
         String typestr = getTypeString(type);
@@ -154,7 +154,7 @@ public class Data {
      */
     protected HashMap<String, Long> periodTurnoverQueryHelper(int year, TYPE type, int id){
 //        Session session = sessionFactory.openSession();
-        String sql = "select year(o.ctime) as year, month(o.ctime) as month , sum(o.money) from Orders o where o.state<>3 and year(o.ctime)=? ";
+        String sql = "select year(o.ctime) as year, month(o.ctime) as month , sum(o.money) from Orders o where o.state<>2 and year(o.ctime)=? ";
         HashMap<String,Long> result = new HashMap<>();
         List<Object[]> queryResult;
         String typeStr = getTypeString(type);
@@ -181,7 +181,7 @@ public class Data {
      */
     protected HashMap<String, Long> periodTurnoverQueryHelper(TYPE type, int id){
 //        Session session = sessionFactory.openSession();
-        String sql = "select year(o.ctime) as year, sum(o.money) from Orders o where o.state<>3 ";
+        String sql = "select year(o.ctime) as year, sum(o.money) from Orders o where o.state<>2 ";
         HashMap<String,Long> result = new HashMap<>();
         List<Object[]> queryResult;
         String typeStr = getTypeString(type);
@@ -211,7 +211,7 @@ public class Data {
      */
     protected long getOrderQueryHelper(int year, int month, int day, TYPE type, int id){
 //        Session session = sessionFactory.openSession();
-        String sql = "select count(o.oid) from Orders o where o.state<>3 and year(o.ctime)=? and month(o.ctime)=? and day(o.ctime)=? ";
+        String sql = "select count(o.oid) from Orders o where o.state<>2 and year(o.ctime)=? and month(o.ctime)=? and day(o.ctime)=? ";
         List<Long> queryResult;
         String typeStr = getTypeString(type);
         sql = sql+typeStr;
@@ -235,7 +235,7 @@ public class Data {
      */
     protected long getOrderQueryHelper(int year, int month, TYPE type, int id){
 //        Session session = sessionFactory.openSession();
-        String sql = "select count(o.oid) from Orders o where o.state<>3 and year(o.ctime)=? and month(o.ctime)=? ";
+        String sql = "select count(o.oid) from Orders o where o.state<>2 and year(o.ctime)=? and month(o.ctime)=? ";
         List<Long> queryResult;
         String typeStr = getTypeString(type);
         sql = sql+typeStr;
@@ -258,7 +258,7 @@ public class Data {
      */
     protected long getOrderQueryHelper(int year, TYPE type, int id){
 //        Session session = sessionFactory.openSession();
-        String sql = "select count(o.oid) from Orders o where o.state<>3 and year(o.ctime)=? ";
+        String sql = "select count(o.oid) from Orders o where o.state<>2 and year(o.ctime)=? ";
         List<Long> queryResult;
         String typeStr = getTypeString(type);
         sql = sql+typeStr;
@@ -283,7 +283,7 @@ public class Data {
      */
     protected long getTurnoverQueryHelper(int year, int month, int day, TYPE type, int id){
 //        Session session = sessionFactory.openSession();
-        String sql = "select sum(o.money) from Orders o where o.state<>3 and year(o.ctime)=? and month(o.ctime)=? and day(o.ctime)=? ";
+        String sql = "select sum(o.money) from Orders o where o.state<>2 and year(o.ctime)=? and month(o.ctime)=? and day(o.ctime)=? ";
         List<Long> queryResult;
         String typeStr = getTypeString(type);
         sql = sql+typeStr;
@@ -307,7 +307,7 @@ public class Data {
      */
     protected long getTurnoverQueryHelper(int year, int month, TYPE type, int id){
 //        Session session = sessionFactory.openSession();
-        String sql = "select sum(o.money) from Orders o where o.state<>3 and year(o.ctime)=? and month(o.ctime)=? ";
+        String sql = "select sum(o.money) from Orders o where o.state<>2 and year(o.ctime)=? and month(o.ctime)=? ";
         List<Long> queryResult;
         String typeStr = getTypeString(type);
         sql = sql+typeStr;
@@ -330,7 +330,7 @@ public class Data {
      */
     protected long getTurnoverQueryHelper(int year, TYPE type, int id){
 //        Session session = sessionFactory.openSession();
-        String sql = "select sum(o.money) from Orders o where o.state<>3 and year(o.ctime)=? ";
+        String sql = "select sum(o.money) from Orders o where o.state<>2 and year(o.ctime)=? ";
         List<Long> queryResult;
         String typeStr = getTypeString(type);
         sql = sql+typeStr;
@@ -352,7 +352,7 @@ public class Data {
      */
     protected long getTotalOrderHelper(TYPE type, int id){
 //        Session session = sessionFactory.openSession();
-        String sql = "select count(o.oid) from Orders o where o.state<>3";
+        String sql = "select count(o.oid) from Orders o where o.state<>2";
         List<Long> queryResult;
         String typeStr = getTypeString(type);
         sql = sql+typeStr;
@@ -374,7 +374,7 @@ public class Data {
      */
     protected long getTotalTurnoverHelper(TYPE type, int id){
 //        Session session = sessionFactory.openSession();
-        String sql = "select sum(o.money) from Orders o where o.state<>3 ";
+        String sql = "select sum(o.money) from Orders o where o.state<>2 ";
         List<Long> queryResult;
         String typeStr = getTypeString(type);
         sql = sql+typeStr;

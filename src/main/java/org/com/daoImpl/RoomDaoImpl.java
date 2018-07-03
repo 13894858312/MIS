@@ -70,7 +70,7 @@ public class RoomDaoImpl implements RoomDao{
 
     @Override
     public HashMap<String, Long> getRoomTurnover(int hid) {
-        String sql = "select o.hid, o.rid, r.rname, sum(o.money) from Orders o join Room r on o.hid=r.hid and r.rid=o.rid where o.state<>3 and o.hid=? group by o.hid,o.rid ";
+        String sql = "select o.hid, o.rid, r.rname, sum(o.money) from Orders o join Room r on o.hid=r.hid and r.rid=o.rid where o.state<>2 and o.hid=? group by o.hid,o.rid ";
         List<Object[]> queryResult = (List<Object[]>) template.find(sql, hid);
         HashMap<String, Long> result = new HashMap<>();
         for(Object[] o : queryResult){
@@ -81,7 +81,7 @@ public class RoomDaoImpl implements RoomDao{
 
     @Override
     public HashMap<String, Long> getRoomOrder(int hid) {
-        String sql = "select o.hid, o.rid, r.rname, count(o.oid) from Orders o join Room r on o.hid=r.hid and r.rid=o.rid where o.state<>3 and o.hid=? group by o.hid,o.rid ";
+        String sql = "select o.hid, o.rid, r.rname, count(o.oid) from Orders o join Room r on o.hid=r.hid and r.rid=o.rid where o.state<>2 and o.hid=? group by o.hid,o.rid ";
         List<Object[]> queryResult = (List<Object[]>) template.find(sql, hid);
         HashMap<String, Long> result = new HashMap<>();
         for(Object[] o : queryResult){
@@ -93,7 +93,7 @@ public class RoomDaoImpl implements RoomDao{
     @Override
     public HashMap<String, Long> getReservedRoomInfo(int year, int month, int day, int hid) {
         Date date = new Date(year,month-1,day);
-        String sql = "select o.hid, o.rid, r.rname, count(o.rnum) from Orders o join Room r on o.hid=r.hid and o.rid=r.rid where o.state<>3 and o.stime<=? and o.etime>=? and o.hid=? group by o.hid,r.rid";
+        String sql = "select o.hid, o.rid, r.rname, count(o.rnum) from Orders o join Room r on o.hid=r.hid and o.rid=r.rid where o.state<>2 and o.stime<=? and o.etime>=? and o.hid=? group by o.hid,r.rid";
         List<Object[]> queryResult = (List<Object[]>) template.find(sql, date, date, hid);
         HashMap<String, Long> result = new HashMap<>();
         for (Object[] o : queryResult){

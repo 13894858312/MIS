@@ -40,7 +40,7 @@
 
 <div class="main-page">
     <div class="order-content">
-        <div id="content">
+        <div class="content">
             <div id="yearly" class="graph-back"></div>
             <div id="monthly" class="graph-back"></div>
             <div id="daily" class="graph-back"></div>
@@ -255,7 +255,7 @@
         daily.setOption(option);
 
     }
-    function getAreaOrder() {
+    function getAreaTurnover() {
         var content;
         var temp=[];
         var area = echarts.init(document.getElementById("area"));
@@ -326,7 +326,7 @@
         getYearly();
         getMonthly();
         getDaily();
-        getAreaOrder();
+        getAreaTurnover();
     }
 </script>
 </html>

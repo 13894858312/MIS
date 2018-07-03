@@ -133,4 +133,5 @@ public class OrderServiceImpl implements OrderService{
     public HashMap<String, Long> getAreaOrderNumRanking(String area, int n) {
         return orderDao.getAreaOrderRanking(area, n);
     }
+
 }

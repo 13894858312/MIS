@@ -49,4 +49,6 @@ public interface HotelService {
 
     public HashMap<String, Long> getTopTurnoverHotel(int num);
 
+    public double[] getToMonthComment(int hid);
+
 }

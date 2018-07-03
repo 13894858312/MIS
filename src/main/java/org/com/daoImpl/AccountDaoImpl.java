@@ -88,7 +88,7 @@ public class AccountDaoImpl implements AccountDao {
 
     @Override
     public long getActiveUserNum(int year, int month) {
-        String hql = "select count(distinct o.uid) from Orders o where o.state<>3 and year(o.ctime)=? and month(o.ctime)=?";
+        String hql = "select count(distinct o.uid) from Orders o where o.state<>2 and year(o.ctime)=? and month(o.ctime)=?";
         return (Long)template.find(hql, year, month).get(0);
     }
 
@@ -107,7 +107,7 @@ public class AccountDaoImpl implements AccountDao {
 
     @Override
     public HashMap<String, Long> getUserAreaOrder(int uid) {
-        String sql = "select h.city, count(o.oid) from Hotel h right join Orders o ON h.hid=o.hid where o.state<>3 and o.uid=? group by h.city";
+        String sql = "select h.city, count(o.oid) from Hotel h right join Orders o ON h.hid=o.hid where o.state<>2 and o.uid=? group by h.city";
         List<Object[]> list = (List<Object[]>) template.find(sql,uid);
         HashMap<String, Long> result = new HashMap<>();
         for(Object[] l :list){
@@ -118,7 +118,7 @@ public class AccountDaoImpl implements AccountDao {
 
     @Override
     public HashMap<String, Long> getUserAreaTurnover(int uid) {
-        String sql = "select h.city, sum(o.money) from Hotel h right join Orders o ON h.hid=o.hid where o.state<>3 and o.uid=? group by h.city";
+        String sql = "select h.city, sum(o.money) from Hotel h right join Orders o ON h.hid=o.hid where o.state<>2 and o.uid=? group by h.city";
         List<Object[]> list = (List<Object[]>) template.find(sql,uid);
         HashMap<String, Long> result = new HashMap<>();
         for(Object[] l :list){

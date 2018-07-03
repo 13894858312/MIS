@@ -9,6 +9,7 @@ import org.com.model.Orders;
 import org.com.service.HotelService;
 import org.com.service.OrderService;
 import org.com.tools.Help;
+import org.com.vo.StringDouble;
 import org.com.vo.StringLong;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -104,7 +105,117 @@ public class HotelAction extends ActionSupport {
         return SUCCESS;
     }
 
+    public String getHotelYearlyOrderNum(){
+        HashMap<String,Long> map = hotelService.getPeriodTurnOver(getHotel());
+        ArrayList<StringLong> list = Help.sl2Array(map);
+        JSONArray jsonArray = JSONArray.fromObject(list);
+        result = jsonArray.toString();
+        return SUCCESS;
+    }
 
+    public String getHotelMonthlyOrderNum(){
+        HashMap<String,Long> map = hotelService.getPeriodTurnOver(Calendar.getInstance().get(Calendar.YEAR), getHotel());
+        ArrayList<StringLong> list = Help.sl2Array(map);
+        JSONArray jsonArray = JSONArray.fromObject(list);
+        result = jsonArray.toString();
+        return SUCCESS;
+    }
+
+    public String getHotelDailyOrderNum(){
+        HashMap<String,Long> map = hotelService.getPeriodTurnOver(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH)+1, getHotel());
+        ArrayList<StringLong> list = Help.sl2Array(map);
+        JSONArray jsonArray = JSONArray.fromObject(list);
+        result = jsonArray.toString();
+        return SUCCESS;
+    }
+
+    public String getHotelYearlyTurnover(){
+        HashMap<String , Long> map = hotelService.getPeriodTurnOver(getHotel());
+        ArrayList<StringLong> list = Help.sl2Array(map);
+        result = JSONArray.fromObject(list).toString();
+        return  SUCCESS;
+    }
+
+    public String getHotelMonthlyTurnover(){
+        HashMap<String , Long> map = hotelService.getPeriodTurnOver(Calendar.getInstance().get(Calendar.YEAR), getHotel());
+        ArrayList<StringLong> list = Help.sl2Array(map);
+        result = JSONArray.fromObject(list).toString();
+        return  SUCCESS;
+    }
+
+    public String getHotelDailyTurnover(){
+        HashMap<String , Long> map = hotelService.getPeriodTurnOver(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH)+1, getHotel());
+        ArrayList<StringLong> list = Help.sl2Array(map);
+        result = JSONArray.fromObject(list).toString();
+        return  SUCCESS;
+    }
+
+    public String getHotelComment(){
+        HashMap<String, Double> map = hotelService.getMonthlyComment(getHotel());
+        ArrayList<StringDouble> list = Help.sd2Array(map);
+        result = JSONArray.fromObject(list).toString();
+        return SUCCESS;
+    }
+
+    public String getToMonthComment(){
+        double[] list = hotelService.getToMonthComment(getHotel());
+        result = JSONArray.fromObject(list).toString();
+        return SUCCESS;
+    }
+
+    public String getHotelCommentChange(){
+        HashMap<String, Double> map = hotelService.getMonthlyComment(getHotel());
+        ArrayList<StringDouble> list = Help.sd2Array(map);
+        ArrayList<StringDouble> list1 = new ArrayList<>();
+        Collections.sort(list);
+        if(list.size()==0){
+            result=JSONArray.fromObject(new StringDouble(Calendar.getInstance().get(Calendar.YEAR)+"-"+(Calendar.getInstance().get(Calendar.MONTH)+1), 1.0)).toString();
+        }
+        if(list.size()==1){
+            result = JSONArray.fromObject(new StringDouble(list.get(0).getS(),1.0)).toString();
+            return SUCCESS;
+        }
+        for(int i = 1;i<list.size(); i++){
+            StringDouble stringDouble = new StringDouble(list.get(i).getS(), list.get(i).getD()/list.get(i-1).getD());
+            list1.add(stringDouble);
+        }
+
+        result = JSONArray.fromObject(list1).toString();
+        return SUCCESS;
+    }
+
+    public String getSameTermTurnover(){
+        HashMap<String, Long> map = hotelService.getPeriodTurnOver(Calendar.getInstance().get(Calendar.YEAR)-1, getHotel());
+        ArrayList<StringLong> list = Help.sl2Array(map);
+        ArrayList<StringLong> list1 = new ArrayList<>();
+        for(StringLong stringLong:list){
+            String s = Calendar.getInstance().get(Calendar.YEAR)+stringLong.getS().substring(5);
+            list1.add(new StringLong(s, stringLong.getL()));
+        }
+        result = JSONArray.fromObject(list1).toString();
+        return SUCCESS;
+    }
+
+    public String getHotelTurnoverChange(){
+        HashMap<String, Long> map = hotelService.getPeriodTurnOver(Calendar.getInstance().get(Calendar.YEAR), getHotel());
+        ArrayList<StringLong> list = Help.sl2Array(map);
+        ArrayList<StringDouble> list1 = new ArrayList<>();
+        Collections.sort(list);
+        if(list.size()==0){
+            result=JSONArray.fromObject(new StringDouble(Calendar.getInstance().get(Calendar.YEAR)+"-"+(Calendar.getInstance().get(Calendar.MONTH)+1), 1.0)).toString();
+        }
+        if(list.size()==1){
+            result = JSONArray.fromObject(new StringDouble(list.get(0).getS(),1.0)).toString();
+            return SUCCESS;
+        }
+        for(int i = 1;i<list.size(); i++){
+            StringDouble stringDouble = new StringDouble(list.get(i).getS(), list.get(i).getL()/list.get(i-1).getL()+0.0);
+            list1.add(stringDouble);
+        }
+
+        result = JSONArray.fromObject(list1).toString();
+        return SUCCESS;
+    }
 
 
     private void makeSession(){
@@ -112,6 +223,11 @@ public class HotelAction extends ActionSupport {
         Map session = actionContext.getSession();
         session.put("hid", this.hid);
         ordersIterator=orderService.getUserOrderList(hid);
+    }
+
+    private static int getHotel(){
+        ActionContext actionContext = ActionContext.getContext();
+        return (Integer) actionContext.getSession().get("hid");
     }
 
     public String getResult() {

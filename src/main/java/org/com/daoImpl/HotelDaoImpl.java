@@ -186,5 +186,15 @@ public class HotelDaoImpl implements HotelDao {
         return result;
     }
 
+    @Override
+    public double[] getToMonthComment(int hid) {
+        double one = (Long) template.find("select count(o.oid) from Orders o where o.hid=? and o.state=3 and o.pingjia=1", hid).get(0);
+        double two = (Long)template.find("select count(o.oid) from Orders o where o.hid=? and o.state=3 and o.pingjia=2", hid).get(0);
+        double three = (Long)template.find("select count(o.oid) from Orders o where o.hid=? and o.state=3 and o.pingjia=3", hid).get(0);
+        double four = (Long)template.find("select count(o.oid) from Orders o where o.hid=? and o.state=3 and o.pingjia=4", hid).get(0);
+        double five=(Long) template.find("select count(o.oid) from Orders o where o.hid=? and o.state=3 and o.pingjia=5", hid).get(0);
+        return new double[]{one, two, three, four, five};
+    }
+
 
 }

@@ -70,11 +70,14 @@
         var content;
         var x=[];
         var y=[];
+        var content1;
+        var x1=[];
+        var y1=[];
 
         $.ajax({
             cache: false,
             async: false,
-            url: 'getRegisterGraph.action',
+            url: 'getActiveGraph.action',
             type: 'GET',
             dataType: 'json',
             success: function (data) {
@@ -82,6 +85,21 @@
                 for(var i=0;i<content.length;i++){
                     x.push(content[i]['s']);
                     y.push(content[i]['l']);
+                }
+
+            }
+        });
+        $.ajax({
+            cache: false,
+            async: false,
+            url: 'getRegisterGraph.action',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                content1 = JSON.parse(data);
+                for(var i=0;i<content1.length;i++){
+                    x1.push(content1[i]['s']);
+                    y1.push(content1[i]['l']);
                 }
 
             }
@@ -99,7 +117,7 @@
             },
             //图例
             legend:{
-                data:['月注册客户数']
+                data:['注册数','活跃用户数']
             },
             toolbox: {
                 show : true,
@@ -125,6 +143,10 @@
                 //折线图
                 type:'line',
                 data:y
+            },{
+                name:'活跃用户数',
+                type:'line',
+                data:y1
             }]
         };
         register.setOption(option);
@@ -159,7 +181,7 @@
                 trigger:'axis'
             },
             legend:{
-                data:['月活跃客户数']
+                data:['活跃用户数']
             },
             toolbox: {
                 show : true,
@@ -179,7 +201,6 @@
             yAxis:{},
             series:[{
                 name:'活跃用户数',
-                //折线图
                 type:'line',
                 data:y
             }]
