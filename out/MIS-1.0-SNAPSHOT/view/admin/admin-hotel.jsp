@@ -16,9 +16,9 @@
 </head>
 <body onload="init()">
 <header class="header">
-    <div class="head-item">
-        <a href="admin-order-list.action">订单列表</a>
-    </div>
+    <%--<div class="head-item">--%>
+        <%--<a href="admin-order-list.action">订单列表</a>--%>
+    <%--</div>--%>
     <div class="head-item">
         <a href="admin-order.action">订单统计</a>
     </div>

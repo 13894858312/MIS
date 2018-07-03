@@ -46,4 +46,6 @@ public interface AccountService {
     public long[] getUserTypeOrder(int uid);
 
     public long getRegisterUserNum(int year, int month);
+
+    public HashMap<String,Long> getUserSectionOrderNum(int uid);
 }

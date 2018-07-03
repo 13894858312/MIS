@@ -52,6 +52,18 @@ public class AccountAction extends ActionSupport {
         }
     }
 
+    public String adminLogin(){
+
+        Account account = new Account(uid,pwd,type);
+        if (accountService.login(account)) {
+            return SUCCESS;
+        } else {
+            HttpServletRequest request = ServletActionContext.getRequest();
+            request.setAttribute("tipMessage", "登陆失败！");
+            return "fail";
+        }
+    }
+
     public String logout() {
         ActionContext actionContext = ActionContext.getContext();
         actionContext.getSession().clear();
@@ -107,11 +119,53 @@ public class AccountAction extends ActionSupport {
         return SUCCESS;
     }
 
+    public String getUserOrder(){
+        int user = getUser();
+        ArrayList<StringLong> list = Help.sl2Array(accountService.getPeriodOrderNum(Calendar.getInstance().get(Calendar.YEAR), user));
+        JSONArray jsonArray = JSONArray.fromObject(list);
+        result = jsonArray.toString();
+        return SUCCESS;
+    }
+
+    public String getUserTurnover(){
+        int user = getUser();
+        ArrayList<StringLong> list = Help.sl2Array(accountService.getPeriodTurnover(Calendar.getInstance().get(Calendar.YEAR), user));
+        JSONArray jsonArray = JSONArray.fromObject(list);
+        result = jsonArray.toString();
+        return SUCCESS;
+    }
+
+    public String getUserState(){
+        int user = getUser();
+        long[] l = accountService.getUserTypeOrder(user);
+        JSONArray jsonArray = JSONArray.fromObject(l);
+        result = jsonArray.toString();
+        return SUCCESS;
+    }
+
+    public String getUserSection(){
+        int user = getUser();
+        ArrayList<StringLong> list = Help.sl2Array(accountService.getUserSectionOrderNum(user));
+        JSONArray jsonArray = JSONArray.fromObject(list);
+        result = jsonArray.toString();
+        return SUCCESS;
+    }
+
+    public String getUserArea(){
+        int user = getUser();
+        ArrayList<StringLong> list = Help.sl2Array(accountService.getAreaOrderNum(user));
+        JSONArray jsonArray = JSONArray.fromObject(list);
+        result = jsonArray.toString();
+        return SUCCESS;
+    }
 
 
 
 
-
+    private int getUser(){
+        ActionContext actionContext = ActionContext.getContext();
+        return (Integer) actionContext.getSession().get("uid");
+    }
 
     private void makeSession(){
         ActionContext actionContext = ActionContext.getContext();

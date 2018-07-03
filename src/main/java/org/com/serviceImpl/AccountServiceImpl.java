@@ -118,4 +118,9 @@ public class AccountServiceImpl implements AccountService {
     public long getRegisterUserNum(int year, int month) {
         return accountDao.getRegisterUserNum(year, month);
     }
+
+    @Override
+    public HashMap<String, Long> getUserSectionOrderNum(int uid) {
+        return accountDao.getUserSectionOrderNum(uid);
+    }
 }

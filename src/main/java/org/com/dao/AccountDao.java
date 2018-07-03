@@ -141,5 +141,12 @@ public interface AccountDao {
      * @param month
      * @return
      */
-    long getRegisterUserNum(int year, int month);
+    public long getRegisterUserNum(int year, int month);
+
+    /**
+     * 用户单笔订单金额区间
+     * @param uid
+     * @return
+     */
+    public HashMap<String, Long> getUserSectionOrderNum(int uid);
 }

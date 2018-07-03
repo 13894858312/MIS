@@ -73,4 +73,13 @@ public class DataTest {
             System.out.println(s+" "+stringLongHashMap.get(s));
         }
     }
+    @Test
+    public void test2(){
+        HashMap<String, Long> stringLongHashMap = accountService.getPeriodTurnover(2018,1);
+        Set<String> set = stringLongHashMap.keySet();
+        for(String s:set){
+
+            System.out.println(s+" "+stringLongHashMap.get(s));
+        }
+    }
 }

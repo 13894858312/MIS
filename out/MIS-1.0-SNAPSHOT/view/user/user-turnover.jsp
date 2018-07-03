@@ -17,9 +17,9 @@
 </head>
 <body>
 <header class="header">
-    <div class="head-item">
-        <a href="user-order-list.action">订单列表</a>
-    </div>
+    <%--<div class="head-item">--%>
+        <%--<a href="user-order-list.action">订单列表</a>--%>
+    <%--</div>--%>
     <div class="head-item">
         <a href="user-order.action">订单统计</a>
     </div>

@@ -107,22 +107,22 @@ public class AccountDaoImpl implements AccountDao {
 
     @Override
     public HashMap<String, Long> getUserAreaOrder(int uid) {
-        String sql = "select h.city, count(o.oid) from Hotel h right join Orders o ON h.hid=o.hid where o.state<>3 group by h.city";
-        List<Object[]> list = (List<Object[]>) template.find(sql);
+        String sql = "select h.city, count(o.oid) from Hotel h right join Orders o ON h.hid=o.hid where o.state<>3 and o.uid=? group by h.city";
+        List<Object[]> list = (List<Object[]>) template.find(sql,uid);
         HashMap<String, Long> result = new HashMap<>();
         for(Object[] l :list){
-            result.put((String)l[0],(long)l[2]);
+            result.put((String)l[0],(long)l[1]);
         }
         return result;
     }
 
     @Override
     public HashMap<String, Long> getUserAreaTurnover(int uid) {
-        String sql = "select h.city, sum(o.money) from Hotel h right join Orders o ON h.hid=o.hid where o.state<>3 group by h.city";
-        List<Object[]> list = (List<Object[]>) template.find(sql);
+        String sql = "select h.city, sum(o.money) from Hotel h right join Orders o ON h.hid=o.hid where o.state<>3 and o.uid=? group by h.city";
+        List<Object[]> list = (List<Object[]>) template.find(sql,uid);
         HashMap<String, Long> result = new HashMap<>();
         for(Object[] l :list){
-            result.put((String)l[0],(long)l[2]);
+            result.put((String)l[0],(long)l[1]);
         }
         return result;
     }
@@ -175,6 +175,19 @@ public class AccountDaoImpl implements AccountDao {
     public long getRegisterUserNum(int year, int month) {
         String hql = "select count(distinct a.uid) from Account a where year(a.logDate)=? and month(a.logDate)=?";
         return (Long)template.find(hql, year, month).get(0);
+    }
+
+    @Override
+    public HashMap<String, Long> getUserSectionOrderNum(int uid) {
+        HashMap<String, Long> result = new HashMap<>();
+        String sql = "select floor(o.money/100) ,count(o.oid) from Orders o WHERE uid=? GROUP BY floor(o.money/100) order by floor(o.money/100) asc ";
+        List<Object[]> list = (List<Object[]>) template.find(sql, uid);
+        for(Object[] o:list){
+            int t = (Integer)o[0];
+            String s = t+"00-"+((t+1)*100-1);
+            result.put(s, (Long)o[1]);
+        }
+        return result;
     }
 
 }

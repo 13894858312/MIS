@@ -25,10 +25,10 @@
             <!--<result name="input">/view/Product.jsp</result>-->
         <!--</action>-->
         <action name="ulogin" class="accountAction" method="login">
-            <result name="success">/view/user/order-list.jsp</result>
+            <result name="success">/view/user/user-order.jsp</result>
             <result name="fail">/view/account/user-login.jsp</result>
         </action>
-        <action name="alogin" class="accountAction" method="login">
+        <action name="alogin" class="accountAction" method="adminLogin">
             <result name="success">/view/admin/admin-order.jsp</result>
             <result name="fail">/view/account/admin-login.jsp</result>
         </action>
@@ -177,7 +177,31 @@
         <!--<action name="user-base">-->
             <!--<result>/view/user/user-base.jsp</result>-->
         <!--</action>-->
-
+        <action name="getUserOrder" class="accountAction" method="getUserOrder">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getUserTurnover" class="accountAction" method="getUserTurnover">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getUserState" class="accountAction" method="getUserState">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getUserSection" class="accountAction" method="getUserSection">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="getUserArea" class="accountAction" method="getUserArea">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
     </package>
 
     <package name="hotel" extends="json-default, struts-default" namespace="/" strict-method-invocation="false">

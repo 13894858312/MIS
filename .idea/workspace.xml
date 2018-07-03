@@ -2,110 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0be13ba3-9f2e-4b65-83d6-879656a7f381" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/action/Help.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/action/ProductAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/dao/ProductDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/daoImpl/ProductDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/model/Product.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/service/ProductService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/serviceImpl/ProductServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/Product.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/com/action/Help.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/com/action/ProductAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/com/dao/ProductDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/com/daoImpl/ProductDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/com/model/Product.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/com/service/ProductService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/com/serviceImpl/ProductServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/com/action/Help.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/com/action/ProductAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/com/dao/ProductDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/com/daoImpl/ProductDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/com/model/Product.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/com/service/ProductService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/com/serviceImpl/ProductServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/view/Product.jsp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/action/AccountAction.class" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/action/AccountAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/action/HotelAction.class" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/action/HotelAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/action/OrderAction.class" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/action/OrderAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/dao/HotelDao.class" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/dao/HotelDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/dao/AccountDao.class" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/dao/AccountDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/daoImpl/AccountDaoImpl.class" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/daoImpl/AccountDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/daoImpl/Data.class" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/daoImpl/Data.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/daoImpl/HotelDaoImpl.class" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/daoImpl/HotelDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/daoImpl/OrderDaoImpl.class" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/daoImpl/OrderDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/service/HotelService.class" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/service/HotelService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/service/OrderService.class" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/service/OrderService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/serviceImpl/HotelServiceImpl.class" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/serviceImpl/HotelServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/serviceImpl/OrderServiceImpl.class" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/serviceImpl/OrderServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/vo/StringLong.class" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/vo/StringLong.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/service/AccountService.class" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/service/AccountService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/serviceImpl/AccountServiceImpl.class" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/org/com/serviceImpl/AccountServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/com/action/AccountAction.class" afterPath="$PROJECT_DIR$/target/classes/org/com/action/AccountAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/com/action/HotelAction.class" afterPath="$PROJECT_DIR$/target/classes/org/com/action/HotelAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/com/action/OrderAction.class" afterPath="$PROJECT_DIR$/target/classes/org/com/action/OrderAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/com/dao/HotelDao.class" afterPath="$PROJECT_DIR$/target/classes/org/com/dao/HotelDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/com/dao/AccountDao.class" afterPath="$PROJECT_DIR$/target/classes/org/com/dao/AccountDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/com/daoImpl/AccountDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/com/daoImpl/AccountDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/com/daoImpl/Data.class" afterPath="$PROJECT_DIR$/target/classes/org/com/daoImpl/Data.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/com/daoImpl/HotelDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/com/daoImpl/HotelDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/com/daoImpl/OrderDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/com/daoImpl/OrderDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/com/service/HotelService.class" afterPath="$PROJECT_DIR$/target/classes/org/com/service/HotelService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/com/service/OrderService.class" afterPath="$PROJECT_DIR$/target/classes/org/com/service/OrderService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/com/serviceImpl/HotelServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/com/serviceImpl/HotelServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/com/serviceImpl/OrderServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/com/serviceImpl/OrderServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/com/vo/StringLong.class" afterPath="$PROJECT_DIR$/target/classes/org/com/vo/StringLong.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/DataTest.class" afterPath="$PROJECT_DIR$/target/test-classes/DataTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/com/service/AccountService.class" afterPath="$PROJECT_DIR$/target/classes/org/com/service/AccountService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/com/serviceImpl/AccountServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/com/serviceImpl/AccountServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/MIS.iml" afterPath="$PROJECT_DIR$/.idea/MIS.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/struts.xml" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/WEB-INF/classes/struts.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/css/index.css" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/account/admin-login.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/account/admin-login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/account/hotel-login.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/account/hotel-login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/account/hotel-register.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/account/hotel-register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/account/user-login.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/account/user-login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/account/user-register.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/account/user-register.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/admin/admin-hotel.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/admin/admin-hotel.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/admin/admin-order.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/admin/admin-order.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/admin/admin-turnover.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/admin/admin-turnover.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/admin/admin-user.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/admin/admin-user.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/admin/order-list.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/admin/order-list.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/hotel/hotel-comment.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/hotel/hotel-comment.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/hotel/hotel-order.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/hotel/hotel-order.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/hotel/hotel-room.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/hotel/hotel-room.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/hotel/hotel-turnover.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/hotel/hotel-turnover.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/hotel/order-list.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/hotel/order-list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/user/order-list.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/user/order-list.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/user/user-order.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/user/user-order.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/user/user-turnover.jsp" afterPath="$PROJECT_DIR$/out/MIS-1.0-SNAPSHOT/view/user/user-turnover.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/com/action/AccountAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/com/action/AccountAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/com/action/HotelAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/com/action/HotelAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/com/action/OrderAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/com/action/OrderAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/com/dao/HotelDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/com/dao/HotelDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/com/dao/AccountDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/com/dao/AccountDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/com/daoImpl/AccountDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/com/daoImpl/AccountDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/com/daoImpl/Data.java" afterPath="$PROJECT_DIR$/src/main/java/org/com/daoImpl/Data.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/com/daoImpl/HotelDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/com/daoImpl/HotelDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/com/daoImpl/OrderDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/com/daoImpl/OrderDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/com/service/HotelService.java" afterPath="$PROJECT_DIR$/src/main/java/org/com/service/HotelService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/com/service/OrderService.java" afterPath="$PROJECT_DIR$/src/main/java/org/com/service/OrderService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/com/serviceImpl/HotelServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/com/serviceImpl/HotelServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/com/serviceImpl/OrderServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/com/serviceImpl/OrderServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/com/vo/StringLong.java" afterPath="$PROJECT_DIR$/src/main/java/org/com/vo/StringLong.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/com/service/AccountService.java" afterPath="$PROJECT_DIR$/src/main/java/org/com/service/AccountService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/com/serviceImpl/AccountServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/com/serviceImpl/AccountServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/struts.xml" afterPath="$PROJECT_DIR$/src/main/resources/struts.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/DataTest.java" afterPath="$PROJECT_DIR$/src/test/java/DataTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/struts.xml" afterPath="$PROJECT_DIR$/target/classes/struts.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/css/index.css" afterPath="$PROJECT_DIR$/webapp/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/account/admin-login.jsp" afterPath="$PROJECT_DIR$/webapp/view/account/admin-login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/account/hotel-login.jsp" afterPath="$PROJECT_DIR$/webapp/view/account/hotel-login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/account/hotel-register.jsp" afterPath="$PROJECT_DIR$/webapp/view/account/hotel-register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/account/user-login.jsp" afterPath="$PROJECT_DIR$/webapp/view/account/user-login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/account/user-register.jsp" afterPath="$PROJECT_DIR$/webapp/view/account/user-register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/admin/admin-hotel.jsp" afterPath="$PROJECT_DIR$/webapp/view/admin/admin-hotel.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/admin/admin-order.jsp" afterPath="$PROJECT_DIR$/webapp/view/admin/admin-order.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/admin/admin-turnover.jsp" afterPath="$PROJECT_DIR$/webapp/view/admin/admin-turnover.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/admin/admin-user.jsp" afterPath="$PROJECT_DIR$/webapp/view/admin/admin-user.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/admin/order-list.jsp" afterPath="$PROJECT_DIR$/webapp/view/admin/order-list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/hotel/hotel-comment.jsp" afterPath="$PROJECT_DIR$/webapp/view/hotel/hotel-comment.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/hotel/hotel-order.jsp" afterPath="$PROJECT_DIR$/webapp/view/hotel/hotel-order.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/hotel/hotel-room.jsp" afterPath="$PROJECT_DIR$/webapp/view/hotel/hotel-room.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/hotel/hotel-turnover.jsp" afterPath="$PROJECT_DIR$/webapp/view/hotel/hotel-turnover.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/hotel/order-list.jsp" afterPath="$PROJECT_DIR$/webapp/view/hotel/order-list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/user/order-list.jsp" afterPath="$PROJECT_DIR$/webapp/view/user/order-list.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/user/user-order.jsp" afterPath="$PROJECT_DIR$/webapp/view/user/user-order.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/view/user/user-turnover.jsp" afterPath="$PROJECT_DIR$/webapp/view/user/user-turnover.jsp" />
     </list>
@@ -158,6 +86,9 @@
       <find>Double</find>
       <find>70</find>
       <find>订单</find>
+      <find>alert</find>
+      <find>area</find>
+      <find>sort</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -171,11 +102,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/webapp/view/account/account-user.jsp" />
         <option value="$PROJECT_DIR$/webapp/view/account/account-login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/org/com/serviceImpl/AccountServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/Test1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/com/service/AccountService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/com/dao/AdminDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/com/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/com/daoImpl/AdminDaoImpl.java" />
@@ -191,36 +119,40 @@
         <option value="$PROJECT_DIR$/webapp/view/hotel/hotel-room.jsp" />
         <option value="$PROJECT_DIR$/webapp/view/hotel/order-list.jsp" />
         <option value="$PROJECT_DIR$/webapp/view/user/order-list.jsp" />
-        <option value="$PROJECT_DIR$/webapp/view/user/user-order.jsp" />
-        <option value="$PROJECT_DIR$/webapp/view/user/user-turnover.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/org/com/Help.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/com/vo/StringDouble.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/com/vo/StringLong.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/com/tools/Help.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/com/action/AccountAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/com/daoImpl/AccountDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/com/dao/OrderDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/com/dao/HotelDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/com/service/HotelService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/com/serviceImpl/HotelServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/com/action/HotelAction.java" />
-        <option value="$PROJECT_DIR$/webapp/js/main.js" />
-        <option value="$PROJECT_DIR$/src/main/java/org/com/service/OrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/com/serviceImpl/OrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/com/action/OrderAction.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/struts.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/DataTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/com/daoImpl/OrderDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/com/daoImpl/Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/com/daoImpl/HotelDaoImpl.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/691435ec-c6e5-48b9-9a65-4090e324b6c6/console.sql" />
-        <option value="$PROJECT_DIR$/webapp/view/admin/admin-turnover.jsp" />
-        <option value="$PROJECT_DIR$/webapp/view/admin/admin-hotel.jsp" />
         <option value="$PROJECT_DIR$/webapp/view/admin/admin-order.jsp" />
         <option value="$PROJECT_DIR$/webapp/view/admin/admin-user.jsp" />
         <option value="$PROJECT_DIR$/webapp/view/hotel/hotel-comment.jsp" />
         <option value="$PROJECT_DIR$/webapp/view/hotel/hotel-order.jsp" />
+        <option value="$PROJECT_DIR$/webapp/view/user/user-turnover.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/org/com/dao/AccountDao.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/691435ec-c6e5-48b9-9a65-4090e324b6c6/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/org/com/serviceImpl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/com/service/AccountService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/com/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/struts.xml" />
         <option value="$PROJECT_DIR$/webapp/css/index.css" />
+        <option value="$PROJECT_DIR$/webapp/view/admin/admin-turnover.jsp" />
+        <option value="$PROJECT_DIR$/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/com/serviceImpl/AccountServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/DataTest.java" />
+        <option value="$PROJECT_DIR$/webapp/view/admin/admin-hotel.jsp" />
+        <option value="$PROJECT_DIR$/webapp/js/main.js" />
+        <option value="$PROJECT_DIR$/webapp/view/user/user-order.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/org/com/action/AccountAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/com/daoImpl/AccountDaoImpl.java" />
       </list>
     </option>
   </component>
@@ -300,6 +232,10 @@
               <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -342,6 +278,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hotel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -544,10 +502,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="serviceImpl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -772,6 +726,27 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DataTest" />
       <option name="METHOD_NAME" value="orderTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="DataTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="MIS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DataTest" />
+      <option name="METHOD_NAME" value="test2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1511,17 +1486,19 @@
         </option>
       </method>
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.MIS" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.Test1.date2" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.DataTest.hotelTest" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.DataTest.orderTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.DataTest.test2" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.DataTest.orderTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.DataTest.hotelTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.Test1.date2" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.DataTest.test2" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DataTest.orderTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DataTest.hotelTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.Test1.date2" />
       </list>
     </recent_temporary>
   </component>
@@ -1543,14 +1520,11 @@
       <workItem from="1530459432373" duration="2963000" />
       <workItem from="1530489999804" duration="4166000" />
       <workItem from="1530511421110" duration="22209000" />
-      <workItem from="1530596055830" duration="6868000" />
+      <workItem from="1530596055830" duration="17283000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DataTest_hotelTest - 2018.07.02 at 21h 19m 45s.xml">
-      <configuration name="DataTest.hotelTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DataTest_hotelTest - 2018.07.02 at 21h 21m 44s.xml">
       <configuration name="DataTest.hotelTest" configurationId="JUnit" />
     </history-entry>
@@ -1578,9 +1552,12 @@
     <history-entry file="DataTest_orderTest - 2018.07.02 at 23h 49m 45s.xml">
       <configuration name="DataTest.orderTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DataTest_test2 - 2018.07.03 at 18h 35m 29s.xml">
+      <configuration name="DataTest.test2" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36206000" />
+    <option name="totallyTimeSpent" value="46621000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="784" extended-state="0" />
@@ -1606,7 +1583,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26126125" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21921922" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1632,7 +1609,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1641,85 +1618,558 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/com/daoImpl/OrderDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="86" column="33" lean-forward="false" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/com/daoImpl/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3248">
-          <caret line="187" column="49" lean-forward="false" selection-start-line="187" selection-start-column="49" selection-end-line="187" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/com/dao/HotelDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="150" column="33" lean-forward="false" selection-start-line="150" selection-start-column="33" selection-end-line="150" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/com/daoImpl/HotelDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/com/serviceImpl/OrderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
-          <caret line="143" column="171" lean-forward="false" selection-start-line="143" selection-start-column="171" selection-end-line="143" selection-end-column="171" />
+          <caret line="131" column="12" lean-forward="false" selection-start-line="131" selection-start-column="12" selection-end-line="131" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/691435ec-c6e5-48b9-9a65-4090e324b6c6/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="76" lean-forward="false" selection-start-line="0" selection-start-column="76" selection-end-line="0" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/com/model/Orders.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="78" column="20" lean-forward="false" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+          <folding>
+            <marker date="1530611692048" expanded="true" signature="1422:1639" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/view/user/user-turnover.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-595">
+          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="21" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <marker date="1530612571665" expanded="true" signature="89:996" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/com/service/AccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/com/serviceImpl/AccountServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="83" column="39" lean-forward="false" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
+          <folding>
+            <element signature="e#3167#3168#0" expanded="true" />
+            <element signature="e#3228#3229#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/com/dao/AccountDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="156">
+          <caret line="91" column="33" lean-forward="false" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/view/admin/admin-turnover.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="311" column="37" lean-forward="true" selection-start-line="311" selection-start-column="37" selection-end-line="311" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/DataTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="75" column="9" lean-forward="true" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/com/action/AccountAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <caret line="155" column="82" lean-forward="false" selection-start-line="155" selection-start-column="82" selection-end-line="155" selection-end-column="82" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/com/daoImpl/AccountDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+        <state relative-caret-position="232">
+          <caret line="186" column="37" lean-forward="true" selection-start-line="186" selection-start-column="37" selection-end-line="186" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/com/serviceImpl/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="83" column="32" lean-forward="true" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
-          <folding>
-            <element signature="e#2287#2288#0" expanded="false" />
-            <element signature="e#2346#2347#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/com/daoImpl/RoomDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-303">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/com/action/OrderAction.java">
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/com/daoImpl/Data.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="51" column="58" lean-forward="true" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
+        <state relative-caret-position="-111">
+          <caret line="138" column="22" lean-forward="false" selection-start-line="138" selection-start-column="22" selection-end-line="138" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/struts.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="160" column="40" lean-forward="true" selection-start-line="160" selection-start-column="40" selection-end-line="160" selection-end-column="40" />
+        <state relative-caret-position="195">
+          <caret line="199" column="72" lean-forward="true" selection-start-line="199" selection-start-column="72" selection-end-line="199" selection-end-column="72" />
           <folding />
         </state>
       </provider>
@@ -1727,477 +2177,28 @@
         <state />
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/691435ec-c6e5-48b9-9a65-4090e324b6c6/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Product">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Hotel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/view/admin/admin-hotel.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="20" selection-end-column="14" />
+        <state relative-caret-position="546">
+          <caret line="167" column="17" lean-forward="true" selection-start-line="167" selection-start-column="17" selection-end-line="170" selection-end-column="5" />
           <folding>
             <marker date="1530604410695" expanded="true" signature="572:650" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/view/admin/admin-turnover.jsp">
+    <entry file="file://$PROJECT_DIR$/webapp/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="136" column="13" lean-forward="true" selection-start-line="136" selection-start-column="13" selection-end-line="136" selection-end-column="13" />
+        <state relative-caret-position="210">
+          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/view/admin/order-list.jsp">
+    <entry file="file://$PROJECT_DIR$/webapp/view/user/user-order.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="60" column="17" lean-forward="true" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/view/admin/admin-user.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720">
-          <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="14" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/view/admin/admin-order.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="22" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f0ffd3bf/691435ec-c6e5-48b9-9a65-4090e324b6c6/HotelMIS.Orders">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/view/hotel/hotel-comment.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="20" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/view/hotel/hotel-order.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/view/account/user-register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/view/account/hotel-register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/view/hotel/hotel-room.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        <state relative-caret-position="-69">
+          <caret line="309" column="6" lean-forward="true" selection-start-line="309" selection-start-column="6" selection-end-line="309" selection-end-column="6" />
           <folding />
         </state>
       </provider>
