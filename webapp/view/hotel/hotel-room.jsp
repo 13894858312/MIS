@@ -67,7 +67,6 @@
     }
     
     function getPercent() {
-        function getState() {
             var content;
             var x=[];
             var temp =[];
@@ -136,7 +135,6 @@
             };
             var percent = echarts.init(document.getElementById("percent"));
             percent.setOption(option);
-        }
     }
 
     function getOrder() {
@@ -290,6 +288,7 @@
         var content1;
         var x1=[];
         var y1=[];
+        var lv=[];
 
         $.ajax({
             cache: false,
@@ -316,42 +315,73 @@
                 for(var i=0;i<content1.length;i++){
                     x1.push(content1[i]['s']);
                     y1.push(content1[i]['l']);
+                    lv.push(content1[i]['l']/content[i]['l']);
                 }
             }
         });
-
         var option = {
-            title:{
-                text:'本日客房被预定数统计图'
+            title : {
+                text: '今日酒店房间入住情况统计'
             },
-            //提示框组件
-            tooltip:{
-                //坐标轴触发，主要用于柱状图，折线图等
-                trigger:'axis'
+            tooltip : {
+                trigger: 'axis'
             },
-            //图例
-            legend:{
-                data:['客房数','预定数']
+            legend: {
+                data:['客房数','预定数', '入住率']
             },
-            xAxis:{
-                show:false,
-                type: 'category',
-                data: x
-            },
-            //纵轴
-            yAxis:{},
-            //系列列表。每个系列通过type决定自己的图表类型
-            series:[{
-                name:'客房数',
-                //折线图
-                type:'line',
-                data:y
-            },{
-                name:'预定数',
-                type:'line',
-                data:y1
-            }]
+            calculable : true,
+            xAxis : [
+                {
+                    type : 'category',
+                    boundaryGap : false,
+                    data : x
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    axisLabel : {
+                        formatter: '{value} 间'
+                    }
+                },
+                {
+                    type : 'value',
+                    name : '入住率',
+                    axisLabel : {
+                        formatter: '{value}'
+                    }
+                }
+            ],
+            series : [
+                {
+                    name:'客房数',
+                    type:'line',
+                    data:y
+                },
+                {
+                    name:'预定数',
+                    type:'line',
+                    data:y1,
+                    markLine : {
+                        data : [
+                            {type : 'average', name : '平均值'}
+                        ]
+                    }
+                },
+                {
+                    name:'入住率',
+                    type:'line',
+                    data: lv,
+                    markPoint : {
+                        data : [
+                            {type : 'max', name: '最大值'},
+                            {type : 'min', name: '最小值'}
+                        ]
+                    }
+                }
+            ]
         };
+
         reserved.setOption(option);
     }
 </script>

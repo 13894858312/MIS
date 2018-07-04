@@ -130,6 +130,7 @@ public class AccountAction extends ActionSupport {
     public String getUserTurnover(){
         int user = getUser();
         ArrayList<StringLong> list = Help.sl2Array(accountService.getPeriodTurnover(Calendar.getInstance().get(Calendar.YEAR), user));
+        Collections.sort(list);
         JSONArray jsonArray = JSONArray.fromObject(list);
         result = jsonArray.toString();
         return SUCCESS;
@@ -146,6 +147,7 @@ public class AccountAction extends ActionSupport {
     public String getUserSection(){
         int user = getUser();
         ArrayList<StringLong> list = Help.sl2Array(accountService.getUserSectionOrderNum(user));
+        Collections.sort(list);
         JSONArray jsonArray = JSONArray.fromObject(list);
         result = jsonArray.toString();
         return SUCCESS;
@@ -154,6 +156,7 @@ public class AccountAction extends ActionSupport {
     public String getUserArea(){
         int user = getUser();
         ArrayList<StringLong> list = Help.sl2Array(accountService.getAreaOrderNum(user));
+        Collections.sort(list);
         JSONArray jsonArray = JSONArray.fromObject(list);
         result = jsonArray.toString();
         return SUCCESS;

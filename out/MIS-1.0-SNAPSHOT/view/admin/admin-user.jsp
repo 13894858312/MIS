@@ -70,25 +70,7 @@
         var content;
         var x=[];
         var y=[];
-        var content1;
-        var x1=[];
-        var y1=[];
 
-        $.ajax({
-            cache: false,
-            async: false,
-            url: 'getActiveGraph.action',
-            type: 'GET',
-            dataType: 'json',
-            success: function (data) {
-                content = JSON.parse(data);
-                for(var i=0;i<content.length;i++){
-                    x.push(content[i]['s']);
-                    y.push(content[i]['l']);
-                }
-
-            }
-        });
         $.ajax({
             cache: false,
             async: false,
@@ -96,10 +78,10 @@
             type: 'GET',
             dataType: 'json',
             success: function (data) {
-                content1 = JSON.parse(data);
-                for(var i=0;i<content1.length;i++){
-                    x1.push(content1[i]['s']);
-                    y1.push(content1[i]['l']);
+                content = JSON.parse(data);
+                for(var i=0;i<content.length;i++){
+                    x.push(content[i]['s']);
+                    y.push(content[i]['l']);
                 }
 
             }
@@ -117,17 +99,9 @@
             },
             //图例
             legend:{
-                data:['注册数','活跃用户数']
-            },
-            toolbox: {
-                show : true,
-                feature : {
-                    mark : {show: true},
-                    dataView : {show: true, readOnly: false},
-                    magicType : {show: true, type: ['line', 'bar']},
-                    restore : {show: true},
-                    saveAsImage : {show: true}
-                }
+                x : 'center',
+                y : 'bottom',
+                data:['注册数']
             },
             //横轴
             xAxis:{
@@ -136,18 +110,21 @@
                 data: x
             },
             //纵轴
-            yAxis:{},
+            yAxis:[
+                {
+                    type: 'value',
+                    axisLabel:{
+                        formatter: '{value} 人'
+                    }
+                }
+            ],
             //系列列表。每个系列通过type决定自己的图表类型
-            series:[{
-                name:'注册数',
+            series:{
+                name: '注册数',
                 //折线图
-                type:'line',
-                data:y
-            },{
-                name:'活跃用户数',
-                type:'line',
-                data:y1
-            }]
+                type: 'line',
+                data: y
+            }
         };
         register.setOption(option);
     }
@@ -181,6 +158,8 @@
                 trigger:'axis'
             },
             legend:{
+                x : 'center',
+                y : 'bottom',
                 data:['活跃用户数']
             },
             toolbox: {
@@ -198,7 +177,14 @@
                 type: 'category',
                 data: x
             },
-            yAxis:{},
+            yAxis:[
+                {
+                    type: 'value',
+                    axisLabel:{
+                        formatter: '{value} 人'
+                    }
+                }
+            ],
             series:[{
                 name:'活跃用户数',
                 type:'line',

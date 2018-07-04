@@ -30,6 +30,9 @@ public class StringLong implements Comparable<StringLong> {
 
     @Override
     public int compareTo(StringLong s2) {
+        if(this.s.length()!=s2.s.length()){
+            return this.s.length()-s2.s.length();
+        }
         return this.s.compareTo(s2.s);
     }
 }

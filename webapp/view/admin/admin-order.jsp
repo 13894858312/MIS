@@ -53,7 +53,8 @@
 <script type="text/javascript">
     function getYearly() {
         var content;
-        var temp =[];
+        var x=[];
+        var y=[];
         var yearly = echarts.init(document.getElementById("yearly"));
         $.ajax({
             cache: false,
@@ -63,64 +64,76 @@
             dataType: 'json',
             success: function (data) {
                 content = JSON.parse(data);
+                content.sort(up);
                 for(var i=0;i<content.length;i++){
-                    temp.push([content[i]['s'], content[i]['l']]);
+                    x.push(content[i]['s']);
+                    y.push(content[i]['l']);
                 }
             }
         });
         var option = {
             title : {
-                text : '网站分年订单数统计折线图'
+                text: '网站分年订单数统计'
             },
             tooltip : {
-                trigger: 'item',
-                formatter : function (params) {
-                    var date = new Date(params.value[0]);
-                    data = date.getFullYear();
-                    return data + '<br/>'
-                        + params.value[1] + ', '
-                        + params.value[2];
+                trigger: 'axis'
+            },
+            legend: {
+                data:['订单数']
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
                 }
             },
-            dataZoom: {
-                show: true,
-                start : 0
-            },
-            legend : {
-                data : ['订单数']
-            },
-            grid: {
-                y2: 80
-            },
+            calculable : true,
             xAxis : [
                 {
-                    type : 'time',
-                    splitNumber:10
+                    type : 'category',
+                    boundaryGap : false,
+                    data : x
                 }
             ],
             yAxis : [
                 {
-                    type : 'value'
+                    type : 'value',
+                    axisLabel : {
+                        formatter: '{value}'
+                    }
                 }
             ],
             series : [
                 {
-                    name: '订单数',
-                    type: 'line',
-                    showAllSymbol: true,
-                    symbolSize: function (value){
-                        return Math.round(value[2]/10) + 2;
+                    name:'订单数',
+                    type:'line',
+                    data:y,
+                    markPoint : {
+                        data : [
+                            {type : 'max', name: '最大值'},
+                            {type : 'min', name: '最小值'}
+                        ]
                     },
-                    data:temp
+                    markLine : {
+                        data : [
+                            {type : 'average', name: '平均值'}
+                        ]
+                    }
                 }
             ]
         };
+
         yearly.setOption(option);
 
     }
     function getMonthly() {
         var content;
-        var temp=[];
+        var x=[];
+        var y=[];
         var monthly = echarts.init(document.getElementById("monthly"));
         $.ajax({
             cache: false,
@@ -130,56 +143,66 @@
             dataType: 'json',
             success: function (data) {
                 content = JSON.parse(data);
+                content.sort(up);
                 for(var i=0;i<content.length;i++){
-                    temp.push([content[i]['s'], content[i]['l']]);
+                    x.push(content[i]['s']);
+                    y.push(content[i]['l']);
                 }
 
             }
-        });var option = {
+        });
+        var option = {
             title : {
-                text : '网站本年分月订单数统计折线图'
+                text: '本年度网站分月订单数统计'
             },
             tooltip : {
-                trigger: 'item',
-                formatter : function (params) {
-                    var date = new Date(params.value[0]);
-                    data = date.getFullYear() + '-'
-                    + (date.getMonth() + 1) ;
-                    return data + '<br/>'
-                        + params.value[1] + ', '
-                        + params.value[2];
+                trigger: 'axis'
+            },
+            legend: {
+                data:['订单数']
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
                 }
             },
-            dataZoom: {
-                show: true,
-                start : 0
-            },
-            legend : {
-                data : ['订单数']
-            },
-            grid: {
-                y2: 80
-            },
+            calculable : true,
             xAxis : [
                 {
-                    type : 'time',
-                    splitNumber:10
+                    type : 'category',
+                    boundaryGap : false,
+                    data : x
                 }
             ],
             yAxis : [
                 {
-                    type : 'value'
+                    type : 'value',
+                    axisLabel : {
+                        formatter: '{value}'
+                    }
                 }
             ],
             series : [
                 {
-                    name: '订单数',
-                    type: 'line',
-                    showAllSymbol: true,
-                    symbolSize: function (value){
-                        return Math.round(value[2]/10) + 2;
+                    name:'订单数',
+                    type:'line',
+                    data:y,
+                    markPoint : {
+                        data : [
+                            {type : 'max', name: '最大值'},
+                            {type : 'min', name: '最小值'}
+                        ]
                     },
-                    data:temp
+                    markLine : {
+                        data : [
+                            {type : 'average', name: '平均值'}
+                        ]
+                    }
                 }
             ]
         };
@@ -187,7 +210,8 @@
     }
     function getDaily() {
         var content;
-        var temp=[];
+        var x=[];
+        var y=[];
         var daily = echarts.init(document.getElementById("daily"));
         $.ajax({
             cache: false,
@@ -197,58 +221,66 @@
             dataType: 'json',
             success: function (data) {
                 content = JSON.parse(data);
+                content.sort(up);
                 for(var i=0;i<content.length;i++){
-                    temp.push([content[i]['s'], content[i]['l']]);
+                    x.push(content[i]['s']);
+                    y.push(content[i]['l']);
                 }
 
             }
         });
         var option = {
             title : {
-                text : '网站本月分日订单数统计折线图'
+                text: '本月网站分日订单数统计'
             },
             tooltip : {
-                trigger: 'item',
-                formatter : function (params) {
-                    var date = new Date(params.value[0]);
-                    data = date.getFullYear() + '-'
-                    + (date.getMonth() + 1) + '-'
-                    + date.getDate();
-                    return data + '<br/>'
-                        + params.value[1] + ', '
-                        + params.value[2];
+                trigger: 'axis'
+            },
+            legend: {
+                data:['订单数']
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
                 }
             },
-            dataZoom: {
-                show: true,
-                start : 0
-            },
-            legend : {
-                data : ['订单数']
-            },
-            grid: {
-                y2: 80
-            },
+            calculable : true,
             xAxis : [
                 {
-                    type : 'time',
-                    splitNumber:10
+                    type : 'category',
+                    boundaryGap : false,
+                    data : x
                 }
             ],
             yAxis : [
                 {
-                    type : 'value'
+                    type : 'value',
+                    axisLabel : {
+                        formatter: '{value}'
+                    }
                 }
             ],
             series : [
                 {
-                    name: '订单数',
-                    type: 'line',
-                    showAllSymbol: true,
-                    symbolSize: function (value){
-                        return Math.round(value[2]/10) + 2;
+                    name:'订单数',
+                    type:'line',
+                    data:y,
+                    markPoint : {
+                        data : [
+                            {type : 'max', name: '最大值'},
+                            {type : 'min', name: '最小值'}
+                        ]
                     },
-                    data:temp
+                    markLine : {
+                        data : [
+                            {type : 'average', name: '平均值'}
+                        ]
+                    }
                 }
             ]
         };
@@ -328,5 +360,13 @@
         getDaily();
         getAreaOrder();
     }
+
+    function up(a,b) {
+        if(a['s'].length-b['s'].length!=0){
+            return a['s'].length-b['s'].length;
+        }
+        return a['s']>b['s'];
+    }
+
 </script>
 </html>

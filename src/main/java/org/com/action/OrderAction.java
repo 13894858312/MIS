@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.HashMap;
 
 /**
@@ -28,6 +29,7 @@ public class OrderAction extends ActionSupport{
     public String getAdminOrderYearly(){
         HashMap<String, Long> map = orderService.getPeriodOrderNum();
         ArrayList<StringLong> list = Help.sl2Array(map);
+        Collections.sort(list);
         JSONArray jsonArray = JSONArray.fromObject(list);
         result = jsonArray.toString();
         return SUCCESS;
@@ -36,6 +38,7 @@ public class OrderAction extends ActionSupport{
     public String getAdminOrderMonthly(){
         HashMap<String, Long> map = orderService.getPeriodOrderNum(Calendar.getInstance().get(Calendar.YEAR));
         ArrayList<StringLong> list = Help.sl2Array(map);
+        Collections.sort(list);
         JSONArray jsonArray = JSONArray.fromObject(list);
         result = jsonArray.toString();
         return SUCCESS;
@@ -44,6 +47,7 @@ public class OrderAction extends ActionSupport{
     public String getAdminOrderDaily(){
         HashMap<String, Long> map = orderService.getPeriodOrderNum(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH)+1);
         ArrayList<StringLong> list = Help.sl2Array(map);
+        Collections.sort(list);
         JSONArray jsonArray = JSONArray.fromObject(list);
         result = jsonArray.toString();
         return SUCCESS;
@@ -51,6 +55,7 @@ public class OrderAction extends ActionSupport{
     public String getAdminTurnoverYearly(){
         HashMap<String, Long> map = orderService.getPeriodTurnOver();
         ArrayList<StringLong> list = Help.sl2Array(map);
+        Collections.sort(list);
         JSONArray jsonArray = JSONArray.fromObject(list);
         result = jsonArray.toString();
         return SUCCESS;
@@ -59,6 +64,7 @@ public class OrderAction extends ActionSupport{
     public String getAdminTurnoverMonthly(){
         HashMap<String, Long> map = orderService.getPeriodTurnOver(Calendar.getInstance().get(Calendar.YEAR));
         ArrayList<StringLong> list = Help.sl2Array(map);
+        Collections.sort(list);
         JSONArray jsonArray = JSONArray.fromObject(list);
         result = jsonArray.toString();
         return SUCCESS;
@@ -67,6 +73,7 @@ public class OrderAction extends ActionSupport{
     public String getAdminTurnoverDaily(){
         HashMap<String, Long> map = orderService.getPeriodTurnOver(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH)+1);
         ArrayList<StringLong> list = Help.sl2Array(map);
+        Collections.sort(list);
         JSONArray jsonArray = JSONArray.fromObject(list);
         result = jsonArray.toString();
         return SUCCESS;

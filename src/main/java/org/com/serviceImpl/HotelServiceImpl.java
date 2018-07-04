@@ -60,7 +60,7 @@ public class HotelServiceImpl implements HotelService{
 
     @Override
     public HashMap<String, Long> getPeriodTurnOver(int year, int month, int hid) {
-        return hotelDao.getHotelPeriodTurnOver(year, hid);
+        return hotelDao.getHotelPeriodTurnOver(year, month, hid);
     }
 
     @Override

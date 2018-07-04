@@ -16,6 +16,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import javax.servlet.http.HttpServletRequest;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -106,24 +107,27 @@ public class HotelAction extends ActionSupport {
     }
 
     public String getHotelYearlyOrderNum(){
-        HashMap<String,Long> map = hotelService.getPeriodTurnOver(getHotel());
+        HashMap<String,Long> map = hotelService.getPeriodOrderNum(getHotel());
         ArrayList<StringLong> list = Help.sl2Array(map);
+        Collections.sort(list);
         JSONArray jsonArray = JSONArray.fromObject(list);
         result = jsonArray.toString();
         return SUCCESS;
     }
 
     public String getHotelMonthlyOrderNum(){
-        HashMap<String,Long> map = hotelService.getPeriodTurnOver(Calendar.getInstance().get(Calendar.YEAR), getHotel());
+        HashMap<String,Long> map = hotelService.getPeriodOrderNum(Calendar.getInstance().get(Calendar.YEAR), getHotel());
         ArrayList<StringLong> list = Help.sl2Array(map);
+        Collections.sort(list);
         JSONArray jsonArray = JSONArray.fromObject(list);
         result = jsonArray.toString();
         return SUCCESS;
     }
 
     public String getHotelDailyOrderNum(){
-        HashMap<String,Long> map = hotelService.getPeriodTurnOver(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH)+1, getHotel());
+        HashMap<String,Long> map = hotelService.getPeriodOrderNum(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH)+1, getHotel());
         ArrayList<StringLong> list = Help.sl2Array(map);
+        Collections.sort(list);
         JSONArray jsonArray = JSONArray.fromObject(list);
         result = jsonArray.toString();
         return SUCCESS;
@@ -132,6 +136,7 @@ public class HotelAction extends ActionSupport {
     public String getHotelYearlyTurnover(){
         HashMap<String , Long> map = hotelService.getPeriodTurnOver(getHotel());
         ArrayList<StringLong> list = Help.sl2Array(map);
+        Collections.sort(list);
         result = JSONArray.fromObject(list).toString();
         return  SUCCESS;
     }
@@ -139,6 +144,7 @@ public class HotelAction extends ActionSupport {
     public String getHotelMonthlyTurnover(){
         HashMap<String , Long> map = hotelService.getPeriodTurnOver(Calendar.getInstance().get(Calendar.YEAR), getHotel());
         ArrayList<StringLong> list = Help.sl2Array(map);
+        Collections.sort(list);
         result = JSONArray.fromObject(list).toString();
         return  SUCCESS;
     }
@@ -146,6 +152,7 @@ public class HotelAction extends ActionSupport {
     public String getHotelDailyTurnover(){
         HashMap<String , Long> map = hotelService.getPeriodTurnOver(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH)+1, getHotel());
         ArrayList<StringLong> list = Help.sl2Array(map);
+        Collections.sort(list);
         result = JSONArray.fromObject(list).toString();
         return  SUCCESS;
     }
@@ -176,7 +183,7 @@ public class HotelAction extends ActionSupport {
             return SUCCESS;
         }
         for(int i = 1;i<list.size(); i++){
-            StringDouble stringDouble = new StringDouble(list.get(i).getS(), list.get(i).getD()/list.get(i-1).getD());
+            StringDouble stringDouble = new StringDouble(list.get(i).getS(), (list.get(i).getD()*1.0)/(list.get(i-1).getD()*1.0));
             list1.add(stringDouble);
         }
 
@@ -187,6 +194,7 @@ public class HotelAction extends ActionSupport {
     public String getSameTermTurnover(){
         HashMap<String, Long> map = hotelService.getPeriodTurnOver(Calendar.getInstance().get(Calendar.YEAR)-1, getHotel());
         ArrayList<StringLong> list = Help.sl2Array(map);
+        Collections.sort(list);
         ArrayList<StringLong> list1 = new ArrayList<>();
         for(StringLong stringLong:list){
             String s = Calendar.getInstance().get(Calendar.YEAR)+stringLong.getS().substring(5);
@@ -197,19 +205,27 @@ public class HotelAction extends ActionSupport {
     }
 
     public String getHotelTurnoverChange(){
+        Date date = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-dd");
+        String s = simpleDateFormat.format(date);
+
         HashMap<String, Long> map = hotelService.getPeriodTurnOver(Calendar.getInstance().get(Calendar.YEAR), getHotel());
         ArrayList<StringLong> list = Help.sl2Array(map);
         ArrayList<StringDouble> list1 = new ArrayList<>();
         Collections.sort(list);
         if(list.size()==0){
-            result=JSONArray.fromObject(new StringDouble(Calendar.getInstance().get(Calendar.YEAR)+"-"+(Calendar.getInstance().get(Calendar.MONTH)+1), 1.0)).toString();
+            StringDouble stringDouble = new StringDouble(s, 1.0);
+            list1.add(stringDouble);
+            result=JSONArray.fromObject(list1).toString();
         }
         if(list.size()==1){
-            result = JSONArray.fromObject(new StringDouble(list.get(0).getS(),1.0)).toString();
+            StringDouble stringDouble = new StringDouble(list.get(0).getS(), 1.0);
+            list1.add(stringDouble);
+            result = JSONArray.fromObject(list1).toString();
             return SUCCESS;
         }
         for(int i = 1;i<list.size(); i++){
-            StringDouble stringDouble = new StringDouble(list.get(i).getS(), list.get(i).getL()/list.get(i-1).getL()+0.0);
+            StringDouble stringDouble = new StringDouble(list.get(i).getS(), list.get(i).getL()*1.0/(list.get(i-1).getL()*1.0));
             list1.add(stringDouble);
         }
 

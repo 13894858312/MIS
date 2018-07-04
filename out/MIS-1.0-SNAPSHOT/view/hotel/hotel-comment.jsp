@@ -74,7 +74,7 @@
         });
         var option = {
             title : {
-                text: '本月客户评分数量',
+                text: '客户评分统计',
                 x:'center'
             },
             tooltip : {
@@ -110,7 +110,7 @@
             calculable : true,
             series : [
                 {
-                    name:'房间类型',
+                    name:'客户评分',
                     type:'pie',
                     radius : '55%',
                     center: ['50%', '60%'],

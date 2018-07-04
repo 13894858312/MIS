@@ -53,11 +53,10 @@
     function getYearly() {
         var content;
         var temp =[];
-        var yearly = echarts.init(document.getElementById("yearly"));
         $.ajax({
             cache: false,
             async: false,
-            url: 'getHotelYearlyOrder.action',
+            url: 'getHotelYearlyOrderNum.action',
             type: 'GET',
             dataType: 'json',
             success: function (data) {
@@ -114,17 +113,17 @@
                 }
             ]
         };
+        var yearly = echarts.init(document.getElementById("yearly"));
         yearly.setOption(option);
 
     }
     function getMonthly() {
         var content;
         var temp=[];
-        var monthly = echarts.init(document.getElementById("monthly"));
         $.ajax({
             cache: false,
             async: false,
-            url: 'getHotelMonthlyOrder.action',
+            url: 'getHotelMonthlyOrderNum.action',
             type: 'GET',
             dataType: 'json',
             success: function (data) {
@@ -134,7 +133,8 @@
                 }
 
             }
-        });var option = {
+        });
+        var option = {
             title : {
                 text : '网站本年分月订单数统计折线图'
             },
@@ -182,6 +182,7 @@
                 }
             ]
         };
+        var monthly = echarts.init(document.getElementById("monthly"));
         monthly.setOption(option);
     }
     function getDaily() {
@@ -191,7 +192,7 @@
         $.ajax({
             cache: false,
             async: false,
-            url: 'getHotelDailyOrder.action',
+            url: 'getHotelDailyOrderNum.action',
             type: 'GET',
             dataType: 'json',
             success: function (data) {

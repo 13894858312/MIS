@@ -30,6 +30,9 @@ public class StringDouble implements Comparable<StringDouble>{
 
     @Override
     public int compareTo(StringDouble s2) {
+        if(this.s.length()!=s2.s.length()){
+            return this.s.length()-s2.s.length();
+        }
         return this.s.compareTo(s2.s);
     }
 }

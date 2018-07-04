@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../css/index.css">
 </head>
 <body>
-<div>
+<div class="background">
     <div class="login-box">
         <Form action="uregister.action" method="post" class="login-form">
             <input class="textfield" type="text" id="user-uid" name="uid" maxlength="30" placeholder="帐号" />

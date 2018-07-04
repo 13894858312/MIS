@@ -154,7 +154,7 @@ public class Data {
      */
     protected HashMap<String, Long> periodTurnoverQueryHelper(int year, TYPE type, int id){
 //        Session session = sessionFactory.openSession();
-        String sql = "select year(o.ctime) as year, month(o.ctime) as month , sum(o.money) from Orders o where o.state<>2 and year(o.ctime)=? ";
+        String sql = "select year(o.ctime), month(o.ctime), sum(o.money) from Orders o where o.state<>2 and year(o.ctime)=? ";
         HashMap<String,Long> result = new HashMap<>();
         List<Object[]> queryResult;
         String typeStr = getTypeString(type);
@@ -194,7 +194,7 @@ public class Data {
 //            queryResult = session.createQuery(sql).setInteger(1,id).list();
         }
         for(Object[] object : queryResult){
-            String date = (String)object[0];
+            String date = ((Integer)object[0]).toString();
             result.put(date, (Long)object[1]);
         }
         return result;

@@ -50,7 +50,7 @@ public class RoomAction extends ActionSupport {
     public String getReservedRoom(){
         Calendar now = Calendar.getInstance();
         HashMap<String, Long> map = roomService.getDayReservedRoomNum(now.get(Calendar.YEAR),
-                now.get(Calendar.MONTH)+1, now.get(Calendar.DATE), getHotel());
+                now.get(Calendar.MONTH)+1, 5, getHotel());
         ArrayList<StringLong> list = Help.sl2Array(map);
         result = JSONArray.fromObject(list).toString();
         return SUCCESS;

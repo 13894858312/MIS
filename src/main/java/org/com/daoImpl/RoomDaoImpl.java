@@ -63,7 +63,8 @@ public class RoomDaoImpl implements RoomDao{
         List<Object[]> queryResult = (List<Object[]>) template.find(sql, hid);
         HashMap<String, Long> result = new HashMap<>();
         for(Object[] o : queryResult){
-            result.put((String)o[0],(Long)o[1]);
+            int a = (Integer) o[1];
+            result.put((String)o[0], (long) a);
         }
         return result;
     }
@@ -92,8 +93,8 @@ public class RoomDaoImpl implements RoomDao{
 
     @Override
     public HashMap<String, Long> getReservedRoomInfo(int year, int month, int day, int hid) {
-        Date date = new Date(year,month-1,day);
-        String sql = "select o.hid, o.rid, r.rname, count(o.rnum) from Orders o join Room r on o.hid=r.hid and o.rid=r.rid where o.state<>2 and o.stime<=? and o.etime>=? and o.hid=? group by o.hid,r.rid";
+        Date date = new Date(year-1900,month-1,day);
+        String sql = "select o.hid, o.rid, r.rname, sum(o.rnum) from Orders o join Room r on o.hid=r.hid and o.rid=r.rid where o.state<>2 and o.stime<=? and o.etime>=? and o.hid=? group by o.hid,r.rid";
         List<Object[]> queryResult = (List<Object[]>) template.find(sql, date, date, hid);
         HashMap<String, Long> result = new HashMap<>();
         for (Object[] o : queryResult){

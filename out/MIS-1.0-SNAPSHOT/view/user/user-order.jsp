@@ -19,9 +19,9 @@
 </head>
 <body onload="init()">
 <header class="header">
-    <%--<div class="head-item">--%>
-        <%--<a href="user-order-list.action">订单列表</a>--%>
-    <%--</div>--%>
+    <div class="head-item">
+        <a href="user-order.action">统计数据</a>
+    </div>
     <%--<div class="head-item">--%>
         <%--<a href="user-order.action">订单-消费额统计</a>--%>
     <%--</div>--%>
@@ -60,6 +60,13 @@
         getSection();
     }
 
+    function upS(a,b) {
+        if(a['s'].length-b['s'].length!=0){
+            return a['s'].length-b['s'].length;
+        }
+        return a['s']>b['s'];
+    }
+
     function getAll() {
         var o;
         var t;
@@ -74,6 +81,7 @@
             dataType: 'json',
             success: function (data) {
                 o = JSON.parse(data);
+                o.sort(upS);
                 for(var i=0;i<o.length;i++){
                     x.push(o[i]['s']);
                     y1.push(o[i]['l']);
@@ -88,6 +96,7 @@
             dataType: 'json',
             success: function (data) {
                 t = JSON.parse(data);
+                t.sort(upS);
                 for(var i=0;i<o.length;i++){
                     y2.push(t[i]['l']);
                 }
@@ -259,7 +268,7 @@
             dataRange: {
                 orient: 'horizontal',
                 min: 0,
-                max: 5,
+                max: 8,
                 text:['高','低'],           // 文本，默认为数值文本
                 splitNumber:0
             },
@@ -317,7 +326,7 @@
         var option = {
             title: {
                 x: 'center',
-                text: '单笔订单销售额区间统计'
+                text: '单笔订单消费额区间统计（单位：百元）'
             },
             tooltip: {
                 trigger: 'item'

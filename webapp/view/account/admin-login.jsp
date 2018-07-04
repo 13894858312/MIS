@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../css/index.css">
 </head>
 <body>
-<div>
+<div class="background">
     <div class="login-box">
 
         <Form action="alogin.action" method="post" class="login-form">

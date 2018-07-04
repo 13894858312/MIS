@@ -291,7 +291,7 @@
             dataRange: {
                 orient: 'horizontal',
                 min: 0,
-                max: 500,
+                max: 800,
                 text:['高','低'],           // 文本，默认为数值文本
                 splitNumber:0
             },

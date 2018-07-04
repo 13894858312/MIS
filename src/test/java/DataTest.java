@@ -6,6 +6,7 @@ import org.com.model.Orders;
 import org.com.service.AccountService;
 import org.com.service.HotelService;
 import org.com.service.OrderService;
+import org.com.service.RoomService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,6 +37,8 @@ public class DataTest {
     HotelService hotelService;
     @Autowired
     OrderService orderService;
+    @Autowired
+    RoomService roomService;
     @Test
     public void addOrder(){
         Orders order = new Orders(1,1,1,1,100,100,new Date(20180201),new Date(20180304),
@@ -80,6 +83,29 @@ public class DataTest {
         for(String s:set){
 
             System.out.println(s+" "+stringLongHashMap.get(s));
+        }
+    }
+
+    @Test
+    public void test3(){
+        HashMap<String, Long> stringLongHashMap = roomService.getDayReservedRoomNum(2018, 7, 5,888);
+        Set<String> set = stringLongHashMap.keySet();
+        for(String s:set){
+            System.out.println(s+" "+stringLongHashMap.get(s));
+        }
+    }
+
+    @Test
+    public void test4(){
+        HashMap<String, Long> stringLongHashMap = hotelService.getPeriodTurnOver(2018,888);
+        HashMap<String, Long> stringLongHashMap1 = hotelService.getPeriodTurnOver(2017,888);
+        Set<String> set = stringLongHashMap.keySet();
+        for(String s:set){
+            System.out.println(s+" "+stringLongHashMap.get(s));
+        }
+        Set<String> set1 = stringLongHashMap1.keySet();
+        for(String s:set1){
+            System.out.println(s+" "+stringLongHashMap1.get(s));
         }
     }
 }

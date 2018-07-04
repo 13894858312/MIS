@@ -82,7 +82,7 @@
     });
         var option = {
             title : {
-                text: '当月酒店订单数排行'
+                text: '当月酒店订单数排行（前十名）'
             },
             tooltip : {
                 trigger: 'axis'
@@ -135,7 +135,7 @@
         });
         var option = {
             title : {
-                text: '当月酒店销售额排行'
+                text: '当月酒店销售额排行（前十名）'
             },
             tooltip : {
                 trigger: 'axis'
@@ -226,8 +226,8 @@
                 {
                     name:'酒店销售额',
                     type:'pie',
-                    radius : [20, 110],
-                    center : ['25%', 200],
+                    radius : [20, 150],
+                    center : ['50%', 200],
                     roseType : 'radius',
                     width: '40%',       // for funnel
                     max: 40,            // for funnel

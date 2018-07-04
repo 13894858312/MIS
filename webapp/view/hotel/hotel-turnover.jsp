@@ -17,9 +17,9 @@
 </head>
 <body onload="init()">
 <header class="header">
-    <div class="head-item">
-        <a href="hotel-order-list.action">订单列表</a>
-    </div>
+    <%--<div class="head-item">--%>
+        <%--<a href="hotel-order-list.action">订单列表</a>--%>
+    <%--</div>--%>
     <div class="head-item">
         <a href="hotel-order.action">订单统计</a>
     </div>
@@ -40,12 +40,12 @@
 <div class="main-page">
     <div class="turnover-content">
         <div class="content">
-            <div id="change" class="graph-back"></div>
-        </div>
-        <div class="content">
             <div id="yearly" class="graph-back"></div>
             <div id="monthly" class="graph-back"></div>
             <div id="daily" class="graph-back"></div>
+        </div>
+        <div class="content">
+            <div id="change" class="graph-back"></div>
         </div>
         <div class="content">
             <div id="same" class="graph-back"></div>
@@ -56,10 +56,10 @@
 
 <script type="text/javascript">
     function init() {
-        getChange();
         getYearly();
         getMonthly();
         getDaily();
+        getChange();
         getSame();
     }
 
@@ -119,10 +119,6 @@
                 {
                     name: '销售额',
                     type: 'line',
-                    showAllSymbol: true,
-                    symbolSize: function (value){
-                        return Math.round(value[2]/10) + 2;
-                    },
                     data:temp
                 }
             ]
@@ -257,10 +253,6 @@
                 {
                     name: '销售额',
                     type: 'line',
-                    showAllSymbol: true,
-                    symbolSize: function (value){
-                        return Math.round(value[2]/10) + 2;
-                    },
                     data:temp
                 }
             ]
@@ -277,7 +269,7 @@
         $.ajax({
             cache: false,
             async: false,
-            url: 'getSameTimeTurnover.action',
+            url: 'getSameTermTurnover.action',
             type: 'GET',
             dataType: 'json',
             success: function (data) {
@@ -297,7 +289,7 @@
             success: function (data) {
                 content2 = JSON.parse(data);
                 for(var i=0;i<content2.length;i++){
-                    y2.push(content1[i]['l']);
+                    y2.push(content2[i]['l']);
                 }
             }
         });
@@ -370,7 +362,7 @@
         var same = echarts.init(document.getElementById("same"));
         same.setOption(option);
     }
-    function change() {
+    function getChange() {
         var content;
         var x=[];
         var y=[];

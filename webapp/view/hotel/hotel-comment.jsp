@@ -110,7 +110,7 @@
             calculable : true,
             series : [
                 {
-                    name:'房间类型',
+                    name:'客户评分',
                     type:'pie',
                     radius : '55%',
                     center: ['50%', '60%'],
